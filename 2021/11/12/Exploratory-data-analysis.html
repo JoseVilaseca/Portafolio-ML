@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exploratory Data Analysis | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Exploratory Data Analysis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Parkinsons Disease Data Set Case Study" />
+<meta property="og:description" content="Parkinsons Disease Data Set Case Study" />
+<link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/2021/11/12/Exploratory-data-analysis.html" />
+<meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/2021/11/12/Exploratory-data-analysis.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-12T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-11-12T00:00:00-06:00","url":"https://josevilaseca.github.io/Portafolio-ML/2021/11/12/Exploratory-data-analysis.html","@type":"BlogPosting","headline":"Exploratory Data Analysis","dateModified":"2021-11-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/2021/11/12/Exploratory-data-analysis.html"},"description":"Parkinsons Disease Data Set Case Study","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Portafolio-ML/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://josevilaseca.github.io/Portafolio-ML/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Portafolio-ML/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Portafolio-ML/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Portafolio-ML/about/">About Me</a><a class="page-link" href="/Portafolio-ML/search/">Search</a><a class="page-link" href="/Portafolio-ML/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Exploratory Data Analysis</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-12T00:00:00-06:00" itemprop="datePublished">
+        Nov 12, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>Parkinsons Disease Data Set Case Study</strong></p>
+
+<p>1)  Brief description of the data set and a summary of its attributes</p>
+
+<p>The dataset was created by Max Little (University of Oxford) in collaboration with the National Centre for Voice and Speech (Denver, Colorado), who recorded speech signals.</p>
+
+<p>It contains biomedical voice measurements from 31 people, 23 with Parkinson’s disease. The attributes are particular voice measures, and the examples correspond with the 195 voice recordings.</p>
+
+<p><strong>Attributes:</strong></p>
+
+<p><strong>name</strong> - ASCII subject name and recording number</p>
+
+<p><strong>MDVP:Fo(Hz)</strong> - Average vocal fundamental frequency</p>
+
+<p><strong>MDVP:Fhi(Hz)</strong> - Maximum vocal fundamental frequency</p>
+
+<p><strong>MDVP:Flo(Hz)</strong> - Minimum vocal fundamental frequency</p>
+
+<p><strong>MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP</strong> - Several</p>
+
+<p>measures of variation in fundamental frequency</p>
+
+<p><strong>MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA</strong> - Several measures of variation in amplitude</p>
+
+<p><strong>NHR,HNR</strong> - Two measures of ratio of noise to tonal components in the voice</p>
+
+<p><strong>status</strong> - Health status of the subject (one) - Parkinson’s, (zero) - healthy</p>
+
+<p><strong>RPDE,D2</strong> - Two nonlinear dynamical complexity measures</p>
+
+<p><strong>DFA</strong> - Signal fractal scaling exponent</p>
+
+<p><strong>spread1,spread2,PPE</strong> - Three nonlinear measures of fundamental frequency variation</p>
+
+<p>(Attribute information from Parkinson.names file in the UCI Repository).</p>
+
+<p>All attributes but name (pacient name) and status (pacient has the disease (1) or not (0)) are real values. The pacient name is not important as it shouldn’t have any descriptive insight to whether a person has Parkinson or not, so we will later remove that attribute. This makes all our predictors real values.</p>
+
+<p>2)  Initial plan for data exploration</p>
+
+<p>The initial plan is to explore attribute distributions, correlations and detect outliers within the distributions.</p>
+
+<p>First, I have decided to plot (sns pairplot) one of each type of attribute so as to have a clearer visualization than if we had called sns pairplot on the entire dataset. By type of attribute im referring to choosing only one predictor that models a certain characteristic. For example, I only plot NHR instead of plotting NHR and HNR in order to reduce the number of graphs created.</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image1.png" alt="" /><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image2.png" alt="" /></p>
+
+<p>By checking at some pairs of attributes, we can notice some degree of separation between both classes. For example, we can see that when comparing NHR and spread1, patients who have parkinsons disease have higher values of spread 1 than patients who don’t have the disease. The outlier points in the majority of the plots tend to belong to the parkinsons class too.</p>
+
+<p>The highest correlations between attributes and status are 0.56 (spread1) and 0.53 (PPE).</p>
+
+<p>3)  Feature engineering and data cleaning</p>
+
+<p>Regarding Data cleaning, not much is required for the selected dataset. We don’t have highly correlated columns and there are no null values. Thus we don’t need to think about which would be the best strategy (imputation, drop column, drop row, etc.). The only cleaning made was to drop the “pacient name” attribute.</p>
+
+<p>As for feature engineering, I have noticed the dataset has some attributes whose distribution is heavily skewed.</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image3.png" alt="" /></p>
+
+<p>Due to this fact, I have decided to use a log transformation for attributes with a skew value greater than 1. This makes the distribution of the transformed predictors to resemble a gaussian distribution, which is a prerequisite for many ML algorithms.</p>
+
+<p>Attributes’ distribution after transformation:</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image4.png" alt="" /></p>
+
+<p>The next step is to normalize the data. I chose to use z transformation, but Min-Max normalization is another option</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image5.png" alt="" /> <img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image6.png" alt="" /></p>
+
+<p>4)  Key findings and insights</p>
+
+<p>By comparing the distributions of parkinson patients’ attributes with non- parkinson patients’ attributes, we can identify some insights which were previously mentioned. The range of values in almost all of the attributes is undeniably greater than the one In attributes of non- parkinson patients. This could be a key insight when trying to predict a parkinson patient. For example, if spread1 is greater than -4, we could infer that the patient has parkinson. Also, the higher spread1 is, the more likely a given patient has parkinson. Also, outlier points tend to correspond with patients who have the disease.</p>
+
+<p>5)  Formulate hypothesis and</p>
+
+<p>6)  Conduct a formal significance tests, discussing results</p>
+
+<p>1-Null hypothesis: The mean of spread1 for parkinsons patients is the same than the mean of spread1 for non-parkinsons patients.</p>
+
+<p>Alternative hypothesis: The mean is different</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image7.png" alt="" /></p>
+
+<p>Thus, we reject the null hypothesis by a great margin. The means are different.</p>
+
+<p>2-Null hypothesis: The mean of spread1 for parkinsons patients is larger than the mean of spread1 for non-parkinsons patients by at least 1.5 standard deviations of the attribute’s distribution.</p>
+
+<p>Alternative-hypothesis: The mean of spread1 for parkinsons patients is not larger than the mean of spread1 for non-parkinsons patients by at least 1.5 standard deviations of the attribute’s distribution.</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image8.png" alt="" /></p>
+
+<p>The null hypothesis is accepted, so we can confirm with 95%confidence that the null hypothesis is correct.</p>
+
+<p>3-Null hypothesis: The mean of DFA for parkinsons patients is larger than the mean of DFA for non-parkinsons patients by at least 1 standard deviation of the attributes distribution.</p>
+
+<p>Alternative-hypothesis: The mean of DFA for parkinsons patients is not larger than the mean of DFA for non-parkinsons patients by at least 1 standard deviation of the attributes distribution.</p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Exploratory-data-analysis/media/image9.png" alt="" /></p>
+
+<p>The null hypothsis is rejected, so we can’t confirm with a 95% confidence that the mean of DFA for parkinsons’ patients is larger than the mean of DFA for non-parkinsons’ patients by at least 1 standard deviation of the attributes distribution.</p>
+
+<p>7)  Suggestions for next steps in analyzing this data.</p>
+
+<p>I would suggest to analyze and compare the distributions of attributes within the same attribute types (attributes that measure the same thing). It is important to separate the distributions by status, so we can check the distribution for parkinsons patients and non-parkinsons patients.</p>
+
+<p>Also, we could implement Principal component analysis to check which attributes have the greatest variance.</p>
+
+<p>8)  Summary of quality of data</p>
+
+<p>I believe the quality of the dataset is decent. There are no missing values and you can visually have an idea of which attributes are going to have a greater effect on predictions (such as spread1).</p>
+
+<p>However, the dataset only has 195 rows, so we could be building this whole EDA on a biased small group of individuals. If more data could be generated with patients from different parts of the world, different age ranges and social status, I would be more confident that the model generated with this data would be a good one.</p>
+
+<p><strong>References:</strong></p>
+
+<p><a href="https://archive.ics.uci.edu/ml/datasets/parkinsons">https://archive.ics.uci.edu/ml/datasets/parkinsons</a></p>
+
+<p>Required Citations:  ’Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection’, Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007)</p>
+
+  </div><a class="u-url" href="/Portafolio-ML/2021/11/12/Exploratory-data-analysis.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Portafolio-ML/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Portafolio-ML/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Portafolio-ML/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Portafolio-ML/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Portafolio-ML/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
