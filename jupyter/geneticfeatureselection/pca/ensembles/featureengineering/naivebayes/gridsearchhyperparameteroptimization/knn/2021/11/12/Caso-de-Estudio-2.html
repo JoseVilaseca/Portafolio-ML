@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Construcción de un modelo que pueda descriminar entre personas con la enfermedad o no utilizando muestras de voz" />
 <meta property="og:description" content="Construcción de un modelo que pueda descriminar entre personas con la enfermedad o no utilizando muestras de voz" />
-<link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/fastpages/jupyter/2021/11/12/Caso-de-Estudio-2.html" />
-<meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/fastpages/jupyter/2021/11/12/Caso-de-Estudio-2.html" />
+<link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/naivebayes/gridsearchhyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2.html" />
+<meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/naivebayes/gridsearchhyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-12T00:00:00-06:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-11-12T00:00:00-06:00","url":"https://josevilaseca.github.io/Portafolio-ML/fastpages/jupyter/2021/11/12/Caso-de-Estudio-2.html","@type":"BlogPosting","image":"https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png","headline":"Caso de Estudio 2 - Parkinsons Disease","dateModified":"2021-11-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/fastpages/jupyter/2021/11/12/Caso-de-Estudio-2.html"},"description":"Construcción de un modelo que pueda descriminar entre personas con la enfermedad o no utilizando muestras de voz","@context":"https://schema.org"}</script>
+{"datePublished":"2021-11-12T00:00:00-06:00","url":"https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/naivebayes/gridsearchhyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2.html","@type":"BlogPosting","image":"https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png","headline":"Caso de Estudio 2 - Parkinsons Disease","dateModified":"2021-11-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/naivebayes/gridsearchhyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2.html"},"description":"Construcción de un modelo que pueda descriminar entre personas con la enfermedad o no utilizando muestras de voz","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portafolio-ML/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://josevilaseca.github.io/Portafolio-ML/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Portafolio-ML/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -78,17 +78,35 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      26 min read
+      21 min read
     
 </span></p>
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/Portafolio-ML/categories/#fastpages">fastpages</a>
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#jupyter">jupyter</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/Portafolio-ML/categories/#jupyter">jupyter</a>
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#GeneticFeatureSelection">GeneticFeatureSelection</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#PCA">PCA</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#Ensembles">Ensembles</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#FeatureEngineering">FeatureEngineering</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#NaiveBayes">NaiveBayes</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#GridSearchHyperparameterOptimization">GridSearchHyperparameterOptimization</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#KNN">KNN</a>
         
       
       </p>
@@ -120,17 +138,30 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Data-Visualization">Data Visualization </a>
+<li class="toc-entry toc-h2"><a href="#Data-Visualization">Data Visualization </a></li>
+<li class="toc-entry toc-h2"><a href="#Transformaciones-a-predictores-con-distribución-sesgada-(skewed)">Transformaciones a predictores con distribución sesgada (skewed) </a></li>
+<li class="toc-entry toc-h2"><a href="#Normalización-con-transformación-Z">Normalización con transformación Z </a></li>
+<li class="toc-entry toc-h2"><a href="#Modelado-y-feature-engineering">Modelado y feature engineering </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Modelado-y-feature-engineering">Modelado y feature engineering </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Benchmarking-con-Naive-Bayes">Benchmarking con Naive Bayes </a></li>
+<li class="toc-entry toc-h3"><a href="#Benchmarking-con-Naive-Bayes">Benchmarking con Naive Bayes </a></li>
+<li class="toc-entry toc-h3"><a href="#KNN">KNN </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#Genetic-Feature-Selection">Genetic Feature Selection </a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#Optimización-de-Hiperparámetros-para-distintos-algoritmos.">Optimización de Hiperparámetros para distintos algoritmos. </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#XGBoost">XGBoost </a></li>
+<li class="toc-entry toc-h2"><a href="#XGBoost">XGBoost </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#PCA">PCA </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Modelos-creados-con-los-primeros-n-componentes-proncipales-(Realizo-pruebas-de-5-a-9)">Modelos creados con los primeros n componentes proncipales (Realizo pruebas de 5 a 9) </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Conclusiones">Conclusiones </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
@@ -797,6 +828,9 @@ dtype: object</pre>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -808,6 +842,7 @@ dtype: object</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -949,6 +984,9 @@ dtype: int64</pre>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -960,6 +998,7 @@ dtype: int64</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1010,12 +1049,6 @@ Name: status, dtype: float64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
-<span class="c1"># number_of_variables = 6</span>
-<span class="c1"># for columns_names in df.columns.to_list():</span>
-<span class="c1">#     arr = ["status"]</span>
-<span class="c1">#     arr.append(columns_names)</span>
-<span class="c1">#     sns.pairplot(df, vars=arr )</span>
-<span class="c1">#     plt.show()</span>
 </pre></div>
 
     </div>
@@ -1059,9 +1092,21 @@ Name: status, dtype: float64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Transformaciones-a-predictores-con-distribución-sesgada-(skewed)">
+<a class="anchor" href="#Transformaciones-a-predictores-con-distribuci%C3%B3n-sesgada-(skewed)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transformaciones a predictores con distribución sesgada (skewed)<a class="anchor-link" href="#Transformaciones-a-predictores-con-distribuci%C3%B3n-sesgada-(skewed)"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -1073,6 +1118,7 @@ Name: status, dtype: float64</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1559,6 +1605,9 @@ dtype: float64</pre>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -1570,6 +1619,7 @@ dtype: float64</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -1764,6 +1814,9 @@ dtype: float64</pre>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -1785,6 +1838,7 @@ dtype: float64</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -2063,6 +2117,15 @@ dtype: float64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Normalización-con-transformación-Z">
+<a class="anchor" href="#Normalizaci%C3%B3n-con-transformaci%C3%B3n-Z" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normalización con transformación Z<a class="anchor-link" href="#Normalizaci%C3%B3n-con-transformaci%C3%B3n-Z"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2265,6 +2328,9 @@ dtype: float64</pre>
     
     
 <div class="cell border-box-sizing code_cell rendered">
+<details class="description" open="">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
 <div class="input">
 
 <div class="inner_cell">
@@ -2285,6 +2351,7 @@ dtype: float64</pre>
 </div>
 </div>
 
+    </details>
 <div class="output_wrapper">
 <div class="output">
 
@@ -2307,18 +2374,18 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modelado-y-feature-engineering">
+<h2 id="Modelado-y-feature-engineering">
 <a class="anchor" href="#Modelado-y-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modelado y feature engineering<a class="anchor-link" href="#Modelado-y-feature-engineering"> </a>
-</h3>
+</h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Benchmarking-con-Naive-Bayes">
+<h3 id="Benchmarking-con-Naive-Bayes">
 <a class="anchor" href="#Benchmarking-con-Naive-Bayes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmarking con Naive Bayes<a class="anchor-link" href="#Benchmarking-con-Naive-Bayes"> </a>
-</h4>
+</h3>
 </div>
 </div>
 </div>
@@ -2428,7 +2495,7 @@ weighted avg       0.81      0.75      0.76        59
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a8fba0f6a0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x267d8ff5e20&gt;</pre>
 </div>
 
 </div>
@@ -2449,14 +2516,62 @@ weighted avg       0.81      0.75      0.76        59
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">genetic_selection</span> <span class="kn">import</span> <span class="o">*</span> 
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="kn">import</span> <span class="n">LinearDiscriminantAnalysis</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingClassifier</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">gnb</span><span class="p">,</span>
+<span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+<span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fitting 5 folds for each of 1 candidates, totalling 5 fits
+best params: {}
+best acc: 0.7076923076923076
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Algoritmo genético para elegir parámetros
-Regresión logística
-Random Forest
-Gradientboosted tree</p>
-
+<h3 id="KNN">
+<a class="anchor" href="#KNN" aria-hidden="true"><span class="octicon octicon-link"></span></a>KNN<a class="anchor-link" href="#KNN"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2469,6 +2584,8 @@ Gradientboosted tree</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">normalized_df</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">normalized_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"status"</span><span class="p">])</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2478,6 +2595,147 @@ Gradientboosted tree</p>
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              precision    recall  f1-score   support
+
+           0       1.00      0.73      0.85        15
+           1       0.92      1.00      0.96        44
+
+    accuracy                           0.93        59
+   macro avg       0.96      0.87      0.90        59
+weighted avg       0.94      0.93      0.93        59
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cf_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Parkinsons"</span><span class="p">,</span> <span class="s2">"No Parkinsons"</span><span class="p">]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cf_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span> <span class="n">xticklabels</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x267d9698a00&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVoAAAD4CAYAAACt8i4nAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjEsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+j8jraAAAbw0lEQVR4nO3de7xc873/8dd7R4iGiCBpKiRR6pTQUFV94HHczq8hWrejraJutbXHvahbD0HbQxUt+T1UNEHrUs5xiaIXJ0fqllKRCIrqIVVEojQIfinJ5/fH+iZG7D2zZvas2WuP99NjPWbWd2Z95xN78sl3f9f3oojAzMyK09HbAZiZtTsnWjOzgjnRmpkVzInWzKxgTrRmZgVbqegPmPHnhR7WYB8wcu2P9HYIVkIfG7yyelrHqlsclTvnvD1rYo8/Lw+3aM3MClZ4i9bMrKVUvvajE62ZtZeOfr0dwQc40ZpZe1FLul3r4kRrZu3FXQdmZgVzi9bMrGBu0ZqZFcwtWjOzgnnUgZlZwdx1YGZWMHcdmJkVzC1aM7OCOdGamRWsn2+GmZkVy320ZmYFK2HXQfkiMjPrCSn/kas69ZM0S9Jt6XyIpDslPZ0e16xVhxOtmbUXdeQ/8jkWeKLi/BRgWkRsBExL51U50ZpZe2lii1bSCGA88NOK4j2Aq9Lzq4A9a9XjRGtm7aWjX+5DUqekhyqOzhVq+xHwbWBpRdmwiJgHkB6H1grJN8PMrL3UcTMsIiYBk7qsRtodWBARMyXt0JOQnGjNrL00b3jXtsAXJe0GDAAGSboamC9peETMkzQcWFCrIncdmFl7adLNsIg4NSJGRMQo4CvA/0TEAcCtwEHpbQcBU2uF5BatmbWX4sfRngvcIOkw4Dlg31oXONGaWXspYD3aiJgOTE/PXwF2rud6J1ozay+egmtmVrASTsF1ojWz9uIWrZlZsdQOiVZSB7BaRLxeQDxmZj1SxkSbqzND0rWSBkkaCPwReErSScWGZmZWP3Uo99EqeXuNN0kt2D2BO4D1gQMLi8rMrEGSch+tkjfR9pfUnyzRTo2Id4AoLiwzs8b05UR7GTAXGAjcLWkk4D5aMyudMibaXDfDIuJi4OKKor9I2rGYkMzMeqB898LyJVpJqwD7AKNWuObsAmIyM2tYGUcd5B3eNRV4DZgJLC4uHDOznuno6Lszw0ZExLhCIzEza4Iytmjzpv77JW1WaCRmZs2gOo4Wydui3Q44WNKzZF0HAiIiNi8sMjOzBpSxRZs30e5aaBRmZk1SxkSbq+sgIv4CDAa+kI7BqczMrFSaNQVX0gBJD0p6RNLjks5K5RMkvSBpdjp2qxVT3uFdxwKHAzeloqslTYqIS/Jcb2bWKk1s0S4GdoqIRWlm7L2SfpVeuygifpi3orxdB4cBn42INwEknQfMAJxozaxUmpVoIyKARem0fzoaWnog76gDAUsqzpdQyvkXZvZhV88UXEmdkh6qODpXqKufpNlkW4rfGREPpJeOkjRH0hRJa9aKKW+L9grgAUk3kyXYPYDJ+f/oZmatUU+LNiImAZOqvL4EGCtpMHCzpDHApcA5ZK3bc4ALgEOrfU7em2EXAocAr6bjkIj4UZ5rzcxaqoBxtBGxkGwX3HERMT8ilkTEUuByYOta1+dd+PvjwONpcZlHgO1ThjczK5WOjo7cRzWS1lmW5yStCuwCPClpeMXb9gIeqxVT3q6DG4GtJG0I/BT4JXAtUHNYg5lZKzVx1MFw4CpJ/cgapTdExG2Sfi5pLFnXwVzgiFoV5U20SyPiXUl7Az+OiEskzWoweDOz4jQpz0bEHGCLLsrr3l0m76iDdyTtB3wNuC2V9a/3wz5MJv/oHI7+6jhO/7f9lpc9eM80TvvmVzhk92149uknejE6K4slS5Zw+IH7cuq3juztUNpGGRf+zptoDwE+B3wvIp6VNBq4uriw+r7tdtmdE85+//3CESM34OjTz+MTYz7wj6R9SN14/dWsP2p0b4fRVvpsoo2IP0bEMRFxXTp/NiLOLTa0vm3jMVswcPVB7yv72PqjGT5iZC9FZGXz8vyX+P199zB+j316O5S2UsZEm3cK7rbABGBkumbZ6l0bFBeaWXubeNEPOOKo43n7rbd6O5S20sptxPPK23UwGbiQbLnEzwBbpccuVc62uOUXV/Y4SLN2M+Pe3zF4yBA2/uSmvR1K2+mzLVrgtYj4Ve23ZSpnW8z480JvS262gscemcX9d9/FA/ffwz8WL+atN9/ke2eewulnuUeup8q4TGLeRHuXpPPJVu9avmdYRDxcSFRmbe7wI4/j8COPA2D2zD9w/TVXOsk2SQnzbO5E+9n0uFVFWQA7NTec9nHped/hyUcfZtHrCzn+a7uz5/6drLb6IK7+yQ9547WFXDTheNbf4BOceM7FtSszs9zK2KJVthJYcdx1YF0ZufZHejsEK6GPDV65x1ly45N/kzvnPHXe51uSlau2aCUdEBFXS/pWV6+nxWbMzEqjhA3aml0HA9Pj6kUHYmbWDB0lHN5VNdFGxGXp6SUR8Wrla2l2mJlZqZSxRZt3HO0vJS2f5iTpk2QreJmZlUoZx9HmTbTfJ0u2q0n6NPBfwAHFhWVm1hgp/9EquYZ3RcTtaRfI35L11+4ZEU8XGpmZWQNqLejdG2qNOriE9+/6OAh4BjhaEhFxTJHBmZnVq1ktVUkDgLuBVchy5X9FxJmShgDXA6PIFv7+UkT8vVpdtVq0D61wPrORgM3MWqWJfa+LgZ0iYlH6jf5eSb8C9gamRcS5kk4BTgFOrlZRrVEHy7ZxuCoi3CdrZqXXrDwb2WyuRem0fzqCbBfwHVL5VWSbNlZNtDU7M9J2u+tIWrmxcM3MWqeZow4k9ZM0G1gA3BkRDwDDImIeQHocWquevGsdzAXuk3Qr8OayQs8MM7OyqadFK6kT6KwompRWHwSWNzTHpt1wb5Y0ppGY8ibaF9PRgWeJmVmJ1TMzrHJJ1xrvWyhpOjAOmC9peETMS1uPL6h1fd7hXWfleZ+ZWW9r1s0wSesA76QkuyqwC3AecCtwEHBuepxaq668W9msA3wb2BQYsKw8IrxMopmVShMnIgwHlg0I6ABuiIjbJM0AbpB0GPAcsG+tivJ2HVxDNm5sd+AbZFn85UYiNzMrUrNatBExB/jAltUR8Qqwcz115Z1CsVZETCZrRv8uIg4Ftqnng8zMWqHPTsEF3kmP8ySNJ7sxNqKYkMzMGtfnlkms8F1JawAnAJeQTcU9vrCozMwaVMatbGqtdTCArE92Q2BdYHJE7NiKwMzMGtHnEi3Z9LJ3gHuAXYFNgGOLDsrMrFElzLM1E+0mEbEZgKTJwIPFh2Rm1ri+2KJddhOMiHi3jH8AM7NKZUxTtRLtpyS9np4LWDWdi2xxm0HdX2pm1np9btRBRPRrVSBmZs3QUcImbd7hXWZmfUIJ86wTrZm1lzLeS3KiNbO2UsIuWidaM2svfe5mmJlZXyOcaM3MClXCBq0TrZm1lzLeDMu7Hq2ZWZ/QrPVoJa0n6S5JT0h6XNKxqXyCpBckzU7HbrVicovWzNpKEycsvAucEBEPS1odmCnpzvTaRRHxw7wVOdGaWVtp1qiDiJgHzEvP35D0BNlysfXH1JSIzMxKop6uA0mdkh6qODq7rlOjyPYPeyAVHSVpjqQpktasFZMTrZm1lQ4p9xERkyJiq4pj0or1SVoNuBE4LiJeBy4FPg6MJWvxXlAzpib/Gc3MepXqOGrWJfUnS7LXRMRNABExPyKWRMRS4HJg61r1uI/WzNpKs4Z3KatoMvBERFxYUT489d8C7AU8VqsuJ1ozaytNnLCwLXAg8Kik2ansNGA/SWOBAOYCR9SqyInWzNpKE0cd3EvXPQx31FuXE62ZtZUyzgxzojWztuK1DszMCuYWrZlZwcqXZp1ozazN9Cth34ETrZm1FXcdmJkVrIR51onWzNpLE5dJbBonWjNrKyXMs8Un2i1GDS76I6wPWvMzR/V2CFZCb8+a2OM63EdrZlawfk60ZmbFKuHoLidaM2svTrRmZgVzH62ZWcHcojUzK1gJG7TeM8zM2stKUu6jGknrSbpL0hOSHpd0bCofIulOSU+nR++Ca2YfLvVsN17Du8AJEfFJYBvgSEmbAKcA0yJiI2BaOq/KidbM2ko9241XExHzIuLh9PwN4AlgXWAP4Kr0tquAPWvG1KM/kZlZydTTopXUKemhiqOz6zo1CtgCeAAYtmwX3PQ4tFZMvhlmZm2lnlEHETEJmFTtPZJWA24EjouI1xsZPuZEa2ZtpZkLf0vqT5Zkr4mIm1LxfEnDI2KepOHAglr1uOvAzNpKh/If1Shruk4GnoiICyteuhU4KD0/CJhaKya3aM2srah5u4ZtCxwIPCppdio7DTgXuEHSYcBzwL61KnKiNbO20qyeg4i4l+73ety5nrqcaM2srXgKrplZwbyojJlZwfqV8Ba/E62ZtRVvzmhmVrAy9tHWbGRL2lfS6un5dyTdJGnL4kMzM6tfExeVaZo8vRn/HhFvSNoO+DzZIgqXFhuWmVljOlDuo3Ux1bYkPY4HLo2IqcDKxYVkZta4MrZo8/TRviDpMmAX4DxJq+Cpu2ZWUiuVsJM2T8L8EvAbYFxELASGACcVGpWZWYP6ZIs2It6SNBUYJmn9VPxksWGZmTWmTw7vknQ0cCYwH1iaigPYvMC4zMwaUsI8m6uP9lhg44h4pehgzMx6qow3kPIk2r8CrxUdiJlZM/TJrgPgGWC6pNuBxcsKV1gI18ysFPpqon0uHSvj8bNmVnLlS7P5Rh2cBZCm4UZELCo8KjOzBjWzQStpCrA7sCAixqSyCcDhwMvpbadFxB3V6smz1sEYSbOAx4DHJc2UtGlPgjczK4qk3EcOVwLjuii/KCLGpqNqkoV8N+gmAd+KiJERMRI4Abg8T4RmZq3WUcdRS0TcDbzajJhqGRgRd1V88HRgYE8/2MysCB1S7kNSp6SHKo7OnB9zlKQ5kqZIWrNmTDkqfEbSv0salY7vAM/mDMbMrKXq6TqIiEkRsVXFMSnHR1wKfBwYC8wDLqh1QZ5EeyiwDnATcDOwNnBIjuvMzFqumV0HXYmI+RGxJCKWknWjbl3rmjyjDv4OHAMgqR9ZV8LrDcZoZlaoojdnlDQ8Iual073IBgpUlWfUwbWSBkkaCDwOPCXJq3eZWSmpjqNmXdJ1wAxgY0nPSzoM+IGkRyXNAXYEjq9VT54JC5tExOuS9gfuAE4GZgLn57jWzKyl+jWxRRsR+3VRPLneevJ0U/SX1B/YE5gaEe+Qrd5lZlY6ZVyPNk+ivQyYSzak625JIwH30ZpZKamO/1olz82wi4GLK4r+ImnH4kIyM2tcCdeUybXw9yrAPsCoFd5/dkExmZk1rJW72+aV52bYVLL1aGdSsUyimVkZ9ckWLTAiIrpaVMHMrHTKuB5tnpth90varPBIzMyaoEP5j1bJ06LdDjhY0rNkXQciW5fWmzOaWem0cjRBXnkS7a6FR2Fm1iQl7DnovutA0qD09I1uDqvDfffczRfHf57dx/0Lky/Ps0CQtauODjHjupO58cffeF/5cQfuzNuzJrLWYK9C2hN9bRzttWRbOMwkmwlWGVUAGxQYV1tZsmQJ3//e2Vx2+RUMGzaMr375X9lhx534+IYb9nZo1guO+uqOPPXsfFYfOGB52Yhhg9lpm3/iuXk9XmP6Q6+Vfa95dduijYjd0+PoiNggPY6OiNFkazFaTo89Oof11hvJiPXWo//KKzNut/FMv2tab4dlvWDdoYMZt92mXHHz/e8r/8GJ+3D6j28hwrPbe6qehb9bFlOtN0g6e4XzDuDqwiJqQwvmz+ejwz+6/HzosGHMnz+/FyOy3nL+SVlCXbr0vYQ6/p8348UFC3n0Ty/0YmTto5mrdzVLnuFd60s6FZbPErsFeLraBZXbQ7g/EqKLNXiKXjPTymfX7cew4NU3mPXEX5eXrTqgPycf9nnOvvT2XoysvZSxRZtn1MEhwDUp2e4I/CoiLqp2QdoOYhLA/3vXK30NG/ZRXpr30vLzBfPnM3To0F6MyHrD58ZuwO7/vBnjttuUVVbuz6CBA5jy3YMYue5aPHj9qUDWtTDj2pPZ/sDzmf+K7zk3ooxNmG4TraQtK05/TLaK133A7yRtGREPFx1cu9h0zGY899xcnn/+rwwbOoxf33E7/3F+zW2GrM2cccmtnHHJrQBs/+mNOO5rO7PfiT9933uevP0stt3/B7yy8M3eCLE9NDHTSppCNihgQUSMSWVDgOvJ1n+ZC3wp7UTTrWot2hUzwd+BTVJ5ADs1EviH0UorrcSpp5/BNzu/ztKlS9hzr33YcMONejsss7bU5C6BK4GJwM8qyk4BpkXEuZJOSecnV6tE1e5yphtf+0bE9Y1G6a4D68qanzmqt0OwEnp71sQeZ8k/PPNa7pzzmQ3WqPl5kkYBt1W0aJ8CdoiIeZKGA9MjYuNqdVS9GZZ2eTwyb9BmZr2ujmEHlTfu09GZ4xOGLducMT3WvOGS52bYnZJOJOuTWN5xFBEeWW1mpVPPjK/KG/dFypNoD02PlS1bzwwzs1Jqwait+cu2HE9dBwtqXZBnK5vRTQnNzKwFWjC861bgIODc9Di11gV5WrRIGkM24mD55OyI+Fn3V5iZ9Y5mTgaSdB2wA7C2pOeBM8kS7A2SDgOeA/atVU+ePcPOTB+0CXAH2bKJ9/L+4Q5mZqXQzK6DiNivm5d2rqeePFNw/zVV+lJEHAJ8Clilng8xM2uVMq51kKfr4O2IWCrp3bRG7QJ8I8zMyqqEc3DzJNqHJA0GLidbm3YR8GChUZmZNajPbWUjaR1gCkBE/ETSr4FBETGnFcGZmdWrjAvjVVtU5uvA94H/BUZL6oyIW1sWmZlZA/pUogWOAzaNiJclbQBcQzZ+zMystPpa18E/IuJlgIh4Ji36bWZWan2tRTtC0sXdnUfEMcWFZWbWmBLm2aqJ9qQVzmcWGYiZWVOUMNN2m2gj4qpWBmJm1gyt3Assr1xrHZiZ9RXlS7NOtGbWbkqYaZ1ozaytlHF4V81FZSSNkHSzpJclzZd0o6QRrQjOzKxeUv6jVfKs3nUF2USF4cC6wC9TmZlZ6ZRx9a48iXadiLgiIt5Nx5XAOgXHZWbWEEm5j1bJ00f7N0kHANel8/2AV4oLycyscc3Mn5LmAm8AS4B3I2KrRurJuznjROAisk0Z7+e9DRvNzEqlgHbqjhHxt55UkGdzxueAL/bkQ8zMWqZ8gw6qLpN4RpXrIiLOKSAeM7MeqWd4l6ROoLOiaFJETKo4D+C3kgK4bIXXcqvWon2zi7KBwGHAWoATrZmVTj19tClxVkue20bEi5KGAndKejIi7q43pmprHVyw7Lmk1YFjgUOAXwAXdHedmVlv6mjuLrgvpscFkm4GtgbqTrRVh3dJGiLpu8AcsqS8ZUScHBELGojZzKwFmjOSVtLA1MhE0kDg/wCPNRJRtT7a84G9yZrVm0XEokY+wMyslZo4vGsYcHMab7sScG1E/LqRiqr10Z4ALAa+A5xeMbhXZDfDBjXygWZmRWpWno2IZ4BPNaOuan20eWaNmZmVSgmXo/XqXWbWXlo5tTYvJ1ozayvlS7NOtGbWZkrYoHWiNbP2UsaFv51ozay9lC/POtGaWXspYZ51ojWz9uLtxs3MClbCPJtrKxszM+sBt2jNrK2UsUXrRGtmbcXDu8zMCuYWrZlZwZxozcwK5q4DM7OClbFF6+FdZtZWmrORTapLGifpKUl/lnRKozE50ZpZe2lSppXUD/i/wK7AJsB+kjZpJCR3HZhZW2niFNytgT+nLW2Q9AtgD+CP9VZUeKIdsFIJe6Z7iaTOtI/8h97bsyb2dgil4e9Fc9WTcyR1Ap0VRZMqfhbrAn+teO154LONxOSug9bqrP0W+xDy96KXRMSkiNiq4qj8B6+rhB2NfI4TrZlZ154H1qs4HwG82EhFTrRmZl37A7CRpNGSVga+AtzaSEW+GdZa7oezrvh7UUIR8a6ko4DfAP2AKRHxeCN1KaKhLgczM8vJXQdmZgVzojUzK5gTLSBpiaTZkh6T9J+SPlLHtQdL+sCgUEnfkPS15kZqzSQpJF1QcX6ipAl1XH+wpJfTd+ePkg6v8/OnS9qqi/I7JA2upy4rNyfazNsRMTYixgD/AL6R5yJJ3d5MjIifRMTPmhWgFWIxsLektXtQx/URMRbYAfi+pGF5LkrTO7sUEbtFxMIexGQl40T7QfcAG0r6gqQHJM2S9N/L/gJJmiBpkqTfAu9LpJLGS5ohae30vhNT+XRJ50l6UNKfJG2fyjdNZbMlzZG0USr/VmpdPybpuFQ2StITki6X9Lik30paNb12TGpRzUnTBC2fd8nu+B+/4guSRkqalv6fTpO0frWKImIB8L/ASEmXSnoo/ZzOqqhzrqQzJN0L7FtR3iHpKknfrXjf2vX+zCUNkXRLKvu9pM1T+QRJU9L38BlJx6TygZJul/RI+q59uYf/P607EfGhP4BF6XElYCrwTWBN3huV8XXggvR8AjATWDWdHwxMBPYiS9JrVrzvxPR8esX1uwH/nZ5fAuyfnq8MrAp8GngUGAisBjwObAGMIksMY9P7bwAOSM9fBFZJzwf39v/PvnIAi4BBwFxgDeBEYEJ67ZfAQen5ocAtXVx/MDAxPd8AWAAMAYaksn7pZ795Op8LfLvi+unANsB1wOkV5XOBtev9mafv05np+U7A7Irv4v3AKqneV4D+wD7A5RWfu0Zv/0za9XCLNrOqpNnAQ8BzwGSyWSC/kfQocBKwacX7b42ItyvOdwROBsZHxN+7+Yyb0uNMsr9AADOA0ySdDIxMdW4H3BwRb0bEonTd9un9z0bE7C7qmQNcI+kAsr+YllNEvE72m8kxK7z0OeDa9PznZD+Xrnw5fXeuA46IiFeBL0l6GJhF9r2pXPHp+hWuvwx4LCK+10399fzMt0uxEhH/A6wlaY302u0RsTgi/kb2D8Iwsn/Qd0m/bW0fEa91E4P1kBNtZlkf7diIODoi/kHWOpgYEZsBRwADKt7/5grXPwOsDnyiymcsTo9LSBNFIuJa4IvA22RJfSeqL962uOL58nqA8WTLuX0amFmt79i69CPgMLLfIrrT3YDz69P35rMRcbOk0WQt450jYnPgdqp/d+4HdpQ0gK7V8zOvNjf/A/VExJ947zeo/5B0RjcxWA850XZvDeCF9PygGu/9C7A38DNJm9Z473KSNgCeiYiLyab2bQ7cDewp6SOSBvJel0R3dXQA60XEXcC3gcFkXQ6WU2qF3kCWbJe5n2zKJcD+wL05qxtElkxfS/36u9Z4/2TgDuA/8/4DWeVnfneKFUk7AH9LLfbu6vkY8FZEXA38ENgyz+db/dzy6d4Esi//C8DvgdHV3hwRT0naP13zhZyf8WXgAEnvAC8BZ0fEq5KuBB5M7/lpRMySNKqbOvoBV6dfEQVcFL5j3YgLgKMqzo8Bpkg6CXgZOCRPJRHxiKRZZH3rzwD35bjmwvTz+3n6DtXS5c9c2dC0KyTNAd6idgNhM+B8SUuBd8juTVgBPAXXzKxg7jowMyuYE62ZWcGcaM3MCuZEa2ZWMCdaM7OCOdGamRXMidbMrGD/H0OemSf9QmeNAAAAAElFTkSuQmCC">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'n_neighbors'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">knn</span><span class="p">,</span>
+<span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+<span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fitting 5 folds for each of 3 candidates, totalling 15 fits
+best params: {'n_neighbors': 1}
+best acc: 0.9282051282051281
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Genetic-Feature-Selection">
+<a class="anchor" href="#Genetic-Feature-Selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genetic Feature Selection<a class="anchor-link" href="#Genetic-Feature-Selection"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2499,12 +2757,12 @@ Gradientboosted tree</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: sklearn-genetic in c:\python38\lib\site-packages (0.4.1)
-Requirement already satisfied: deap&gt;=1.0.2 in c:\python38\lib\site-packages (from sklearn-genetic) (1.3.1)
 Requirement already satisfied: scikit-learn&gt;=0.20.3 in c:\python38\lib\site-packages (from sklearn-genetic) (0.24.2)
-Requirement already satisfied: numpy in c:\python38\lib\site-packages (from deap&gt;=1.0.2-&gt;sklearn-genetic) (1.18.2)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (2.2.0)
-Requirement already satisfied: scipy&gt;=0.19.1 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (1.4.1)
+Requirement already satisfied: deap&gt;=1.0.2 in c:\python38\lib\site-packages (from sklearn-genetic) (1.3.1)
 Requirement already satisfied: joblib&gt;=0.11 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (1.0.1)
+Requirement already satisfied: scipy&gt;=0.19.1 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (1.4.1)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (2.2.0)
+Requirement already satisfied: numpy&gt;=1.13.3 in c:\python38\lib\site-packages (from scikit-learn&gt;=0.20.3-&gt;sklearn-genetic) (1.18.2)
 </pre>
 </div>
 </div>
@@ -2541,55 +2799,108 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 
 
 
-<span class="c1"># estimator = RandomForestClassifier(max_depth=5, random_state=42, n_estimators=250)</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 <span class="c1"># #estimator = GradientBoostingClassifier(max_depth=3, random_state=27, n_estimators=100)</span>
 
 <span class="c1"># #estimator = LinearDiscriminantAnalysis()</span>
 
 
-<span class="c1"># report = pd.DataFrame()</span>
-<span class="c1"># nofeats = [] </span>
-<span class="c1"># chosen_feats = [] </span>
-<span class="c1"># cvscore = [] </span>
-<span class="c1"># rkf = RepeatedStratifiedKFold(n_repeats = 1, n_splits = 10)</span>
-<span class="c1"># for i in range(4,10):</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">nofeats</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">chosen_feats</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">cvscore</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">rkf</span> <span class="o">=</span> <span class="n">RepeatedStratifiedKFold</span><span class="p">(</span><span class="n">n_repeats</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_splits</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]:</span>
   
-<span class="c1">#   selector = GeneticSelectionCV(estimator,</span>
-<span class="c1">#                                 cv = rkf,</span>
-<span class="c1">#                                 verbose = 0,</span>
-<span class="c1">#                                 scoring = mcc,</span>
-<span class="c1">#                                 max_features = i,</span>
-<span class="c1">#                                 #n_population = 50,</span>
-<span class="c1">#                                 n_population = 50,</span>
-<span class="c1">#                                 crossover_proba = 0.5,</span>
-<span class="c1">#                                 mutation_proba = 0.2,</span>
-<span class="c1">#                                 #n_generations = 10,</span>
-<span class="c1">#                                 n_generations = 10,</span>
-<span class="c1">#                                 crossover_independent_proba=0.5,</span>
-<span class="c1">#                                 mutation_independent_proba=0.05,</span>
-<span class="c1">#                                 #tournament_size = 3,</span>
-<span class="c1">#                                 n_gen_no_change=10,</span>
-<span class="c1">#                                 caching=True,</span>
-<span class="c1">#                                 n_jobs=-1)</span>
-<span class="c1">#   # selector = selector.fit(D[allfeats], y)</span>
-<span class="c1">#   # genfeats = D[allfeats].columns[selector.support_]</span>
-<span class="c1">#   selector = selector.fit(X, y)</span>
-<span class="c1">#   genfeats = X.columns[selector.support_]</span>
-<span class="c1">#   #print("El Selector support: "+str(selector.support_))</span>
-<span class="c1">#   genfeats = list(genfeats)</span>
-<span class="c1">#   print("Chosen Feats:  ", genfeats)</span>
+  <span class="n">selector</span> <span class="o">=</span> <span class="n">GeneticSelectionCV</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span>
+                                <span class="n">cv</span> <span class="o">=</span> <span class="n">rkf</span><span class="p">,</span>
+                                <span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                <span class="n">scoring</span> <span class="o">=</span> <span class="n">mcc</span><span class="p">,</span>
+                                <span class="n">max_features</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span>
+                                <span class="n">n_population</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+                                <span class="n">crossover_proba</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                                <span class="n">mutation_proba</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+                                <span class="n">n_generations</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                                <span class="n">crossover_independent_proba</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                                <span class="n">mutation_independent_proba</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+                                <span class="c1">#tournament_size = 3,</span>
+                                <span class="n">n_gen_no_change</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                <span class="n">caching</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="c1"># selector = selector.fit(D[allfeats], y)</span>
+  <span class="c1"># genfeats = D[allfeats].columns[selector.support_]</span>
+  <span class="n">selector</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  <span class="n">genfeats</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">selector</span><span class="o">.</span><span class="n">support_</span><span class="p">]</span>
+  <span class="c1">#print("El Selector support: "+str(selector.support_))</span>
+  <span class="n">genfeats</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">genfeats</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Chosen Feats:  "</span><span class="p">,</span> <span class="n">genfeats</span><span class="p">)</span>
 
-<span class="c1">#   cv_score = selector.generation_scores_[-1]</span>
-<span class="c1">#   nofeats.append(len(genfeats)) </span>
-<span class="c1">#   chosen_feats.append(genfeats) </span>
-<span class="c1">#   cvscore.append(cv_score)</span>
-<span class="c1"># report["No of Feats"] = nofeats</span>
-<span class="c1"># report["Chosen Feats"] = chosen_feats</span>
-<span class="c1"># report["Scores"] = cvscore</span>
-<span class="c1"># report.head(10)</span>
+  <span class="n">cv_score</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">generation_scores_</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">nofeats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">genfeats</span><span class="p">))</span> 
+  <span class="n">chosen_feats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">genfeats</span><span class="p">)</span> 
+  <span class="n">cvscore</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cv_score</span><span class="p">)</span>
+<span class="n">report</span><span class="p">[</span><span class="s2">"No of Feats"</span><span class="p">]</span> <span class="o">=</span> <span class="n">nofeats</span>
+<span class="n">report</span><span class="p">[</span><span class="s2">"Chosen Feats"</span><span class="p">]</span> <span class="o">=</span> <span class="n">chosen_feats</span>
+<span class="n">report</span><span class="p">[</span><span class="s2">"Scores"</span><span class="p">]</span> <span class="o">=</span> <span class="n">cvscore</span>
+<span class="n">report</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Chosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)', 'MDVP:Jitter(Abs)', 'NHR', 'HNR', 'RPDE', 'DFA', 'spread2', 'PPE']
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No of Feats</th>
+      <th>Chosen Feats</th>
+      <th>Scores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9</td>
+      <td>[MDVP:Fo(Hz), MDVP:Flo(Hz), MDVP:Jitter(Abs), ...</td>
+      <td>0.847156</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2604,32 +2915,11 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">10 splits, n 100, max height 5</span>
-
-<span class="sd">Chosen Feats:   ['PPE']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fhi(Hz)', 'spread2']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fhi(Hz)', 'Jitter:DDP', 'spread1']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'Shimmer:APQ3', 'RPDE', 'PPE']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)', 'Shimmer:DDA', 'spread1']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Jitter(%)', 'Jitter:DDP', 'spread2', 'PPE']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'Jitter:DDP', 'NHR', 'RPDE', 'DFA', 'spread2']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'Shimmer:APQ3', 'HNR', 'PPE']</span>
-<span class="sd">Chosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)', 'MDVP:RAP', 'Shimmer:APQ3', 'Shimmer:DDA', 'RPDE', 'spread1']</span>
-
-
-<span class="sd">0	1	[PPE]	0.581319</span>
-<span class="sd">1	2	[MDVP:Fhi(Hz), spread2]	0.759835</span>
-<span class="sd">2	3	[MDVP:Fhi(Hz), Jitter:DDP, spread1]	0.746843</span>
-<span class="sd">3	4	[MDVP:Fo(Hz), Shimmer:APQ3, RPDE, PPE]	0.824767</span>
-<span class="sd">4	4	[MDVP:Fo(Hz), MDVP:Flo(Hz), Shimmer:DDA, spread1]	0.863302</span>
-<span class="sd">5	6	[MDVP:Fo(Hz), MDVP:Fhi(Hz), MDVP:Jitter(%), Ji...	0.827838</span>
-<span class="sd">6	7	[MDVP:Fo(Hz), MDVP:Fhi(Hz), Jitter:DDP, NHR, R...	0.858792</span>
-<span class="sd">7	4	[MDVP:Fo(Hz), Shimmer:APQ3, HNR, PPE]	0.863075</span>
-<span class="sd">8	7	[MDVP:Fo(Hz), MDVP:Flo(Hz), MDVP:RAP, Shimmer:...	0.837370</span>
-
+<span class="sd">['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'Jitter:DDP', 'Shimmer:APQ3', 'Shimmer:APQ5', 'NHR', 'HNR', 'DFA', 'spread2', 'PPE'] </span>
+<span class="sd">84.8% acc</span>
 <span class="sd">"""</span>
 
-<span class="c1">#Luego de multiples corridas con diferentes parámetros seleccionados, la mejor fue con [MDVP:Fo(Hz), MDVP:Flo(Hz), Shimmer:DDA, spread1]</span>
+<span class="c1">#Luego de multiples corridas con diferentes parámetros seleccionados, la mejor fue con la configuración mencionada anteriormente</span>
 </pre></div>
 
     </div>
@@ -2644,7 +2934,7 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>"\n10 splits, n 100, max height 5\n\nChosen Feats:   ['PPE']\nChosen Feats:   ['MDVP:Fhi(Hz)', 'spread2']\nChosen Feats:   ['MDVP:Fhi(Hz)', 'Jitter:DDP', 'spread1']\nChosen Feats:   ['MDVP:Fo(Hz)', 'Shimmer:APQ3', 'RPDE', 'PPE']\nChosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)', 'Shimmer:DDA', 'spread1']\nChosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Jitter(%)', 'Jitter:DDP', 'spread2', 'PPE']\nChosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'Jitter:DDP', 'NHR', 'RPDE', 'DFA', 'spread2']\nChosen Feats:   ['MDVP:Fo(Hz)', 'Shimmer:APQ3', 'HNR', 'PPE']\nChosen Feats:   ['MDVP:Fo(Hz)', 'MDVP:Flo(Hz)', 'MDVP:RAP', 'Shimmer:APQ3', 'Shimmer:DDA', 'RPDE', 'spread1']\n\n\n0\t1\t[PPE]\t0.581319\n1\t2\t[MDVP:Fhi(Hz), spread2]\t0.759835\n2\t3\t[MDVP:Fhi(Hz), Jitter:DDP, spread1]\t0.746843\n3\t4\t[MDVP:Fo(Hz), Shimmer:APQ3, RPDE, PPE]\t0.824767\n4\t4\t[MDVP:Fo(Hz), MDVP:Flo(Hz), Shimmer:DDA, spread1]\t0.863302\n5\t6\t[MDVP:Fo(Hz), MDVP:Fhi(Hz), MDVP:Jitter(%), Ji...\t0.827838\n6\t7\t[MDVP:Fo(Hz), MDVP:Fhi(Hz), Jitter:DDP, NHR, R...\t0.858792\n7\t4\t[MDVP:Fo(Hz), Shimmer:APQ3, HNR, PPE]\t0.863075\n8\t7\t[MDVP:Fo(Hz), MDVP:Flo(Hz), MDVP:RAP, Shimmer:...\t0.837370\n\n"</pre>
+<pre>"\n['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'Jitter:DDP', 'Shimmer:APQ3', 'Shimmer:APQ5', 'NHR', 'HNR', 'DFA', 'spread2', 'PPE'] \n84.8% acc\n"</pre>
 </div>
 
 </div>
@@ -2662,8 +2952,8 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># X= X[["MDVP:Fo(Hz)", "MDVP:Flo(Hz)", "Shimmer:DDA", "spread1"]]</span>
-<span class="c1"># X.head()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">=</span> <span class="n">X</span><span class="p">[[</span><span class="s1">'MDVP:Fo(Hz)'</span><span class="p">,</span> <span class="s1">'MDVP:Fhi(Hz)'</span><span class="p">,</span> <span class="s1">'MDVP:Jitter(%)'</span><span class="p">,</span> <span class="s1">'MDVP:Jitter(Abs)'</span><span class="p">,</span> <span class="s1">'Jitter:DDP'</span><span class="p">,</span> <span class="s1">'Shimmer:APQ3'</span><span class="p">,</span> <span class="s1">'Shimmer:APQ5'</span><span class="p">,</span> <span class="s1">'NHR'</span><span class="p">,</span> <span class="s1">'HNR'</span><span class="p">,</span> <span class="s1">'DFA'</span><span class="p">,</span> <span class="s1">'spread2'</span><span class="p">,</span> <span class="s1">'PPE'</span><span class="p">]]</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -2696,46 +2986,94 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
     <tr style="text-align: right;">
       <th></th>
       <th>MDVP:Fo(Hz)</th>
-      <th>MDVP:Flo(Hz)</th>
-      <th>Shimmer:DDA</th>
-      <th>spread1</th>
+      <th>MDVP:Fhi(Hz)</th>
+      <th>MDVP:Jitter(%)</th>
+      <th>MDVP:Jitter(Abs)</th>
+      <th>Jitter:DDP</th>
+      <th>Shimmer:APQ3</th>
+      <th>Shimmer:APQ5</th>
+      <th>NHR</th>
+      <th>HNR</th>
+      <th>DFA</th>
+      <th>spread2</th>
+      <th>PPE</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>-0.827171</td>
-      <td>-1.127228</td>
-      <td>0.869064</td>
-      <td>0.799266</td>
+      <td>-0.415271</td>
+      <td>0.730419</td>
+      <td>1.001937</td>
+      <td>0.543770</td>
+      <td>0.869328</td>
+      <td>1.281737</td>
+      <td>0.496891</td>
+      <td>-0.192729</td>
+      <td>1.756293</td>
+      <td>0.479243</td>
+      <td>0.866655</td>
     </tr>
     <tr>
       <th>1</th>
       <td>-0.768992</td>
-      <td>0.113642</td>
-      <td>1.488615</td>
-      <td>1.476053</td>
+      <td>-0.571305</td>
+      <td>1.097305</td>
+      <td>1.189745</td>
+      <td>0.904351</td>
+      <td>1.488428</td>
+      <td>1.919248</td>
+      <td>0.372162</td>
+      <td>-0.632879</td>
+      <td>1.832844</td>
+      <td>1.307819</td>
+      <td>1.798974</td>
     </tr>
     <tr>
       <th>2</th>
       <td>-0.907141</td>
-      <td>0.053878</td>
-      <td>1.269071</td>
-      <td>1.138515</td>
+      <td>-0.917587</td>
+      <td>1.238811</td>
+      <td>1.355404</td>
+      <td>1.153822</td>
+      <td>1.269276</td>
+      <td>1.644953</td>
+      <td>0.017714</td>
+      <td>-0.279042</td>
+      <td>1.937062</td>
+      <td>1.015070</td>
+      <td>1.399060</td>
     </tr>
     <tr>
       <th>3</th>
       <td>-0.907286</td>
-      <td>0.048834</td>
-      <td>1.369642</td>
-      <td>1.437245</td>
+      <td>-0.778925</td>
+      <td>1.148675</td>
+      <td>1.355404</td>
+      <td>1.025137</td>
+      <td>1.369834</td>
+      <td>1.709904</td>
+      <td>0.047937</td>
+      <td>-0.280624</td>
+      <td>1.827676</td>
+      <td>1.290518</td>
+      <td>1.802314</td>
     </tr>
     <tr>
       <th>4</th>
       <td>-0.923281</td>
-      <td>0.029783</td>
-      <td>1.672406</td>
-      <td>1.776368</td>
+      <td>-0.701794</td>
+      <td>1.588933</td>
+      <td>1.637642</td>
+      <td>1.446398</td>
+      <td>1.672399</td>
+      <td>2.033435</td>
+      <td>0.291975</td>
+      <td>-0.505444</td>
+      <td>1.904461</td>
+      <td>0.095948</td>
+      <td>2.261262</td>
     </tr>
   </tbody>
 </table>
@@ -2829,14 +3167,16 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">xgb</span><span class="p">,</span>
 <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
 <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="c1"># 83 con todos los params</span>
+<span class="c1"># 83,58 con predictores seleccionados con estrategia genética</span>
+<span class="c1">#best params: {'learning_rate': 0.125, 'max_depth': 5, 'n_estimators': 125}</span>
+<span class="c1">#best acc: 0.8358974358974359</span>
 </pre></div>
 
     </div>
@@ -2850,9 +3190,6 @@ You should consider upgrading via the 'c:\python38\python.exe -m pip install --u
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Fitting 5 folds for each of 90 candidates, totalling 450 fits
-[23:32:09] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-best params: {'learning_rate': 0.75, 'max_depth': 5, 'n_estimators': 80}
-best acc: 0.8205128205128205
 </pre>
 </div>
 </div>
@@ -2866,234 +3203,14 @@ best acc: 0.8205128205128205
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_features</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>22</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[21:15:23] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+best params: {'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 350}
+best acc: 0.9435897435897436
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>MDVP:Fo(Hz)</th>
-      <th>MDVP:Fhi(Hz)</th>
-      <th>MDVP:Flo(Hz)</th>
-      <th>MDVP:Jitter(%)</th>
-      <th>MDVP:Jitter(Abs)</th>
-      <th>MDVP:RAP</th>
-      <th>MDVP:PPQ</th>
-      <th>Jitter:DDP</th>
-      <th>MDVP:Shimmer</th>
-      <th>MDVP:Shimmer(dB)</th>
-      <th>...</th>
-      <th>MDVP:APQ</th>
-      <th>Shimmer:DDA</th>
-      <th>NHR</th>
-      <th>HNR</th>
-      <th>RPDE</th>
-      <th>DFA</th>
-      <th>spread1</th>
-      <th>spread2</th>
-      <th>D2</th>
-      <th>PPE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-0.827171</td>
-      <td>-0.415271</td>
-      <td>-1.127228</td>
-      <td>0.730419</td>
-      <td>1.001937</td>
-      <td>0.545302</td>
-      <td>1.150192</td>
-      <td>0.543770</td>
-      <td>0.988053</td>
-      <td>1.019244</td>
-      <td>...</td>
-      <td>0.681709</td>
-      <td>0.869064</td>
-      <td>0.496891</td>
-      <td>-0.192729</td>
-      <td>-0.805764</td>
-      <td>1.756293</td>
-      <td>0.799266</td>
-      <td>0.479243</td>
-      <td>-0.209990</td>
-      <td>0.866655</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>-0.768992</td>
-      <td>-0.571305</td>
-      <td>0.113642</td>
-      <td>1.097305</td>
-      <td>1.189745</td>
-      <td>0.905477</td>
-      <td>1.541298</td>
-      <td>0.904351</td>
-      <td>1.594278</td>
-      <td>1.679079</td>
-      <td>...</td>
-      <td>1.361677</td>
-      <td>1.488615</td>
-      <td>0.372162</td>
-      <td>-0.632879</td>
-      <td>-0.386529</td>
-      <td>1.832844</td>
-      <td>1.476053</td>
-      <td>1.307819</td>
-      <td>0.274371</td>
-      <td>1.798974</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-0.907141</td>
-      <td>-0.917587</td>
-      <td>0.053878</td>
-      <td>1.238811</td>
-      <td>1.355404</td>
-      <td>1.152774</td>
-      <td>1.738793</td>
-      <td>1.153822</td>
-      <td>1.309491</td>
-      <td>1.230963</td>
-      <td>...</td>
-      <td>1.015607</td>
-      <td>1.269071</td>
-      <td>0.017714</td>
-      <td>-0.279042</td>
-      <td>-0.660375</td>
-      <td>1.937062</td>
-      <td>1.138515</td>
-      <td>1.015070</td>
-      <td>-0.103363</td>
-      <td>1.399060</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>-0.907286</td>
-      <td>-0.778925</td>
-      <td>0.048834</td>
-      <td>1.148675</td>
-      <td>1.355404</td>
-      <td>1.026142</td>
-      <td>1.546216</td>
-      <td>1.025137</td>
-      <td>1.396090</td>
-      <td>1.351129</td>
-      <td>...</td>
-      <td>1.102856</td>
-      <td>1.369642</td>
-      <td>0.047937</td>
-      <td>-0.280624</td>
-      <td>-0.611559</td>
-      <td>1.827676</td>
-      <td>1.437245</td>
-      <td>1.290518</td>
-      <td>0.061985</td>
-      <td>1.802314</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>-0.923281</td>
-      <td>-0.701794</td>
-      <td>0.029783</td>
-      <td>1.588933</td>
-      <td>1.637642</td>
-      <td>1.445419</td>
-      <td>1.997038</td>
-      <td>1.446398</td>
-      <td>1.677367</td>
-      <td>1.560025</td>
-      <td>...</td>
-      <td>1.400427</td>
-      <td>1.672406</td>
-      <td>0.291975</td>
-      <td>-0.505444</td>
-      <td>-0.781010</td>
-      <td>1.904461</td>
-      <td>1.776368</td>
-      <td>0.095948</td>
-      <td>-0.129692</td>
-      <td>2.261262</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 22 columns</p>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -3118,14 +3235,16 @@ best acc: 0.8205128205128205
 
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">randomForest</span><span class="p">,</span>
 <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+<span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
 <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="c1">#81 con todos los params</span>
+<span class="c1">#81 con con predictores seleccionados con estrategia genética</span>
+<span class="c1">#best params: {'max_features': 2, 'n_estimators': 1000}</span>
+<span class="c1">#best acc: 0.8153846153846154</span>
 </pre></div>
 
     </div>
@@ -3139,12 +3258,39 @@ best acc: 0.8205128205128205
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Fitting 5 folds for each of 24 candidates, totalling 120 fits
-best params: {'max_features': 7, 'n_estimators': 1250}
-best acc: 0.8
+best params: {'max_features': 12, 'n_estimators': 3000}
+best acc: 0.9333333333333332
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="PCA">
+<a class="anchor" href="#PCA" aria-hidden="true"><span class="octicon octicon-link"></span></a>PCA<a class="anchor-link" href="#PCA"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">normalized_df</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">normalized_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"status"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -3179,6 +3325,15 @@ best acc: 0.8
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Modelos-creados-con-los-primeros-n-componentes-proncipales-(Realizo-pruebas-de-5-a-9)">
+<a class="anchor" href="#Modelos-creados-con-los-primeros-n-componentes-proncipales-(Realizo-pruebas-de-5-a-9)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modelos creados con los primeros n componentes proncipales (Realizo pruebas de 5 a 9)<a class="anchor-link" href="#Modelos-creados-con-los-primeros-n-componentes-proncipales-(Realizo-pruebas-de-5-a-9)"> </a>
+</h4>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3186,7 +3341,8 @@ best acc: 0.8
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bestRFPCModelResults</span><span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">pca</span> <span class="o">=</span> <span class="n">generatePCA</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
     <span class="n">pca_y</span> <span class="o">=</span> <span class="n">pca</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span>
     <span class="n">pca_X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"status"</span><span class="p">])</span>
@@ -3199,13 +3355,14 @@ best acc: 0.8
 
     <span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">randomForest</span><span class="p">,</span>
     <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-    <span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+    <span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
     <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pca_X</span><span class="p">,</span><span class="n">pca_y</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">bestRFPCModelResults</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"i"</span><span class="p">:</span><span class="n">i</span><span class="p">,</span> <span class="s2">"params"</span><span class="p">:</span> <span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="s2">"bestScore"</span><span class="p">:</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="p">})</span>
 </pre></div>
 
     </div>
@@ -3220,34 +3377,29 @@ best acc: 0.8
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>5
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4']
-5
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+5 best params: {'max_features': 5, 'n_estimators': 1000}
+5 best acc: 0.8666666666666668
 6
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5']
-6
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+6 best params: {'max_features': 6, 'n_estimators': 1000}
+6 best acc: 0.8666666666666666
 7
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6']
-7
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+7 best params: {'max_features': 4, 'n_estimators': 1000}
+7 best acc: 0.8974358974358975
 8
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7']
-8
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+8 best params: {'max_features': 8, 'n_estimators': 1000}
+8 best acc: 0.8923076923076921
 9
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8']
-9
-10
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9']
-10
-11
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10']
-11
-12
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11']
-12
-13
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11', 'pc_12']
-13
-14
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11', 'pc_12', 'pc_13']
-14
+Fitting 5 folds for each of 24 candidates, totalling 120 fits
+9 best params: {'max_features': 3, 'n_estimators': 1000}
+9 best acc: 0.8974358974358975
 </pre>
 </div>
 </div>
@@ -3265,7 +3417,8 @@ best acc: 0.8
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bestPCModelResults</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">pca</span> <span class="o">=</span> <span class="n">generatePCA</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
     <span class="n">pca_y</span> <span class="o">=</span> <span class="n">pca</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span>
     <span class="n">pca_X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"status"</span><span class="p">])</span>
@@ -3280,13 +3433,14 @@ best acc: 0.8
 
     <span class="n">classifier</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">xgb</span><span class="p">,</span>
     <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-    <span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+    <span class="n">cv</span><span class="o">=</span><span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
     <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pca_X</span><span class="p">,</span><span class="n">pca_y</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> best params: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> best acc: </span><span class="si">{</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">bestPCModelResults</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"i"</span><span class="p">:</span><span class="n">i</span><span class="p">,</span> <span class="s2">"params"</span><span class="p">:</span> <span class="n">classifier</span><span class="o">.</span><span class="n">best_params_</span><span class="p">,</span> <span class="s2">"bestScore"</span><span class="p">:</span><span class="n">classifier</span><span class="o">.</span><span class="n">best_score_</span><span class="p">})</span>
 
     
 </pre></div>
@@ -3320,7 +3474,7 @@ Fitting 5 folds for each of 18 candidates, totalling 90 fits
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:52:05] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
+<pre>[21:23:09] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
 Parameters: { "early_stopping_rounds" } might not be used.
 
   This could be a false alarm, with some parameters getting used by language bindings but
@@ -3328,9 +3482,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
   but getting flagged wrongly here. Please open an issue if you find any such cases.
 
 
-[00:52:05] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-5 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.125, 'max_depth': 5, 'n_estimators': 3000}
-5 best acc: 0.7794871794871795
+[21:23:09] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+5 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 4, 'n_estimators': 1000}
+5 best acc: 0.8666666666666666
 6
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5']
 Fitting 5 folds for each of 18 candidates, totalling 90 fits
@@ -3350,7 +3504,7 @@ Fitting 5 folds for each of 18 candidates, totalling 90 fits
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:52:36] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
+<pre>[21:23:35] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
 Parameters: { "early_stopping_rounds" } might not be used.
 
   This could be a false alarm, with some parameters getting used by language bindings but
@@ -3358,9 +3512,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
   but getting flagged wrongly here. Please open an issue if you find any such cases.
 
 
-[00:52:36] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-6 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 3000}
-6 best acc: 0.7641025641025643
+[21:23:35] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+6 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 1000}
+6 best acc: 0.8717948717948719
 7
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6']
 Fitting 5 folds for each of 18 candidates, totalling 90 fits
@@ -3380,7 +3534,7 @@ Fitting 5 folds for each of 18 candidates, totalling 90 fits
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:53:06] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
+<pre>[21:24:02] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
 Parameters: { "early_stopping_rounds" } might not be used.
 
   This could be a false alarm, with some parameters getting used by language bindings but
@@ -3388,9 +3542,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
   but getting flagged wrongly here. Please open an issue if you find any such cases.
 
 
-[00:53:06] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-7 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.125, 'max_depth': 4, 'n_estimators': 1000}
-7 best acc: 0.7589743589743589
+[21:24:02] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+7 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 5, 'n_estimators': 1000}
+7 best acc: 0.8717948717948719
 8
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7']
 Fitting 5 folds for each of 18 candidates, totalling 90 fits
@@ -3410,7 +3564,7 @@ Fitting 5 folds for each of 18 candidates, totalling 90 fits
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:53:35] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
+<pre>[21:24:28] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
 Parameters: { "early_stopping_rounds" } might not be used.
 
   This could be a false alarm, with some parameters getting used by language bindings but
@@ -3418,9 +3572,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
   but getting flagged wrongly here. Please open an issue if you find any such cases.
 
 
-[00:53:35] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-8 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.125, 'max_depth': 5, 'n_estimators': 3000}
-8 best acc: 0.7794871794871796
+[21:24:28] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+8 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 1000}
+8 best acc: 0.8769230769230768
 9
 ['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8']
 Fitting 5 folds for each of 18 candidates, totalling 90 fits
@@ -3440,7 +3594,7 @@ Fitting 5 folds for each of 18 candidates, totalling 90 fits
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:54:07] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
+<pre>[21:24:55] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
 Parameters: { "early_stopping_rounds" } might not be used.
 
   This could be a false alarm, with some parameters getting used by language bindings but
@@ -3448,159 +3602,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
   but getting flagged wrongly here. Please open an issue if you find any such cases.
 
 
-[00:54:07] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-9 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.125, 'max_depth': 4, 'n_estimators': 3000}
-9 best acc: 0.7692307692307694
-10
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9']
-Fitting 5 folds for each of 18 candidates, totalling 90 fits
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Python38\lib\site-packages\xgboost\sklearn.py:1224: UserWarning: The use of label encoder in XGBClassifier is deprecated and will be removed in a future release. To remove this warning, do the following: 1) Pass option use_label_encoder=False when constructing XGBClassifier object; and 2) Encode your labels (y) as integers starting with 0, i.e. 0, 1, 2, ..., [num_class - 1].
-  warnings.warn(label_encoder_deprecation_msg, UserWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:54:39] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
-Parameters: { "early_stopping_rounds" } might not be used.
-
-  This could be a false alarm, with some parameters getting used by language bindings but
-  then being mistakenly passed down to XGBoost core, or some parameter actually being used
-  but getting flagged wrongly here. Please open an issue if you find any such cases.
-
-
-[00:54:39] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-10 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.125, 'max_depth': 4, 'n_estimators': 3000}
-10 best acc: 0.7794871794871796
-11
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10']
-Fitting 5 folds for each of 18 candidates, totalling 90 fits
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Python38\lib\site-packages\xgboost\sklearn.py:1224: UserWarning: The use of label encoder in XGBClassifier is deprecated and will be removed in a future release. To remove this warning, do the following: 1) Pass option use_label_encoder=False when constructing XGBClassifier object; and 2) Encode your labels (y) as integers starting with 0, i.e. 0, 1, 2, ..., [num_class - 1].
-  warnings.warn(label_encoder_deprecation_msg, UserWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:55:14] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
-Parameters: { "early_stopping_rounds" } might not be used.
-
-  This could be a false alarm, with some parameters getting used by language bindings but
-  then being mistakenly passed down to XGBoost core, or some parameter actually being used
-  but getting flagged wrongly here. Please open an issue if you find any such cases.
-
-
-[00:55:14] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-11 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 3000}
-11 best acc: 0.7692307692307694
-12
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11']
-Fitting 5 folds for each of 18 candidates, totalling 90 fits
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Python38\lib\site-packages\xgboost\sklearn.py:1224: UserWarning: The use of label encoder in XGBClassifier is deprecated and will be removed in a future release. To remove this warning, do the following: 1) Pass option use_label_encoder=False when constructing XGBClassifier object; and 2) Encode your labels (y) as integers starting with 0, i.e. 0, 1, 2, ..., [num_class - 1].
-  warnings.warn(label_encoder_deprecation_msg, UserWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:55:47] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
-Parameters: { "early_stopping_rounds" } might not be used.
-
-  This could be a false alarm, with some parameters getting used by language bindings but
-  then being mistakenly passed down to XGBoost core, or some parameter actually being used
-  but getting flagged wrongly here. Please open an issue if you find any such cases.
-
-
-[00:55:47] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-12 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 1000}
-12 best acc: 0.7589743589743592
-13
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11', 'pc_12']
-Fitting 5 folds for each of 18 candidates, totalling 90 fits
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Python38\lib\site-packages\xgboost\sklearn.py:1224: UserWarning: The use of label encoder in XGBClassifier is deprecated and will be removed in a future release. To remove this warning, do the following: 1) Pass option use_label_encoder=False when constructing XGBClassifier object; and 2) Encode your labels (y) as integers starting with 0, i.e. 0, 1, 2, ..., [num_class - 1].
-  warnings.warn(label_encoder_deprecation_msg, UserWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:56:18] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
-Parameters: { "early_stopping_rounds" } might not be used.
-
-  This could be a false alarm, with some parameters getting used by language bindings but
-  then being mistakenly passed down to XGBoost core, or some parameter actually being used
-  but getting flagged wrongly here. Please open an issue if you find any such cases.
-
-
-[00:56:18] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-13 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 1000}
-13 best acc: 0.7846153846153847
-14
-['pc_0', 'pc_1', 'pc_2', 'pc_3', 'pc_4', 'pc_5', 'pc_6', 'pc_7', 'pc_8', 'pc_9', 'pc_10', 'pc_11', 'pc_12', 'pc_13']
-Fitting 5 folds for each of 18 candidates, totalling 90 fits
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Python38\lib\site-packages\xgboost\sklearn.py:1224: UserWarning: The use of label encoder in XGBClassifier is deprecated and will be removed in a future release. To remove this warning, do the following: 1) Pass option use_label_encoder=False when constructing XGBClassifier object; and 2) Encode your labels (y) as integers starting with 0, i.e. 0, 1, 2, ..., [num_class - 1].
-  warnings.warn(label_encoder_deprecation_msg, UserWarning)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[00:56:49] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:576: 
-Parameters: { "early_stopping_rounds" } might not be used.
-
-  This could be a false alarm, with some parameters getting used by language bindings but
-  then being mistakenly passed down to XGBoost core, or some parameter actually being used
-  but getting flagged wrongly here. Please open an issue if you find any such cases.
-
-
-[00:56:49] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-14 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 5, 'n_estimators': 1000}
-14 best acc: 0.7794871794871796
+[21:24:55] WARNING: C:/Users/Administrator/workspace/xgboost-win64_release_1.5.0/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+9 best params: {'early_stopping_rounds': 50, 'learning_rate': 0.075, 'max_depth': 3, 'n_estimators': 1000}
+9 best acc: 0.8769230769230768
 </pre>
 </div>
 </div>
@@ -3614,7 +3618,10 @@ Parameters: { "early_stopping_rounds" } might not be used.
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>restringir la altura de los árboles? No, pero van a ser bajos</p>
+<h2 id="Conclusiones">
+<a class="anchor" href="#Conclusiones" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusiones<a class="anchor-link" href="#Conclusiones"> </a>
+</h2>
+<p>Luego de realizar distintas formas de preprocesamiento a los datos para los distintos algoritmos candidatos, habiendo aplicado optimización de features y de hiperparámetros, podemos concluir que el mejor algoritmo para la creación del modelo es: XGBoost.</p>
 
 </div>
 </div>
@@ -3631,7 +3638,7 @@ Parameters: { "early_stopping_rounds" } might not be used.
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/Portafolio-ML/fastpages/jupyter/2021/11/12/Caso-de-Estudio-2.html" hidden></a>
+</script><a class="u-url" href="/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/naivebayes/gridsearchhyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
