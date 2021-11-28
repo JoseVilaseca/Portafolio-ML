@@ -182,26 +182,7 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
-<span class="c1"># def __iter__(self): return 0</span>
 
-<span class="c1"># # @hidden_cell</span>
-<span class="c1"># # The following code accesses a file in your IBM Cloud Object Storage. It includes your credentials.</span>
-<span class="c1"># # You might want to remove those credentials before you share the notebook.</span>
-
-<span class="c1"># if os.environ.get('RUNTIME_ENV_LOCATION_TYPE') == 'external':</span>
-<span class="c1">#     endpoint_edb04af4bfbd4b478c6eb955554ec728 = 'https://s3.us.cloud-object-storage.appdomain.cloud'</span>
-<span class="c1"># else:</span>
-<span class="c1">#     endpoint_edb04af4bfbd4b478c6eb955554ec728 = 'https://s3.private.us.cloud-object-storage.appdomain.cloud'</span>
-
-<span class="c1"># client_edb04af4bfbd4b478c6eb955554ec728 = ibm_boto3.client(service_name='s3',</span>
-<span class="c1">#     ibm_api_key_id='DdD1_G6mjg6CJl0hlrqBBsb5SccoiGMT0tlWEdsmX4tA',</span>
-<span class="c1">#     ibm_auth_endpoint="https://iam.cloud.ibm.com/oidc/token",</span>
-<span class="c1">#     config=Config(signature_version='oauth'),</span>
-<span class="c1">#     endpoint_url=endpoint_edb04af4bfbd4b478c6eb955554ec728)</span>
-
-<span class="c1"># body = client_edb04af4bfbd4b478c6eb955554ec728.get_object(Bucket='exploratorydataanalysisformachine-donotdelete-pr-a9r235otzochhr',Key='parkinsons.csv')['Body']</span>
-<span class="c1"># # add missing __iter__ method, so pandas accepts body as file-like object</span>
-<span class="c1"># if not hasattr(body, "__iter__"): body.__iter__ = types.MethodType( __iter__, body )</span>
 
 <span class="n">df_data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./data/parkinsons.csv"</span><span class="p">)</span>
 <span class="n">df_data_1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3448,7 +3429,10 @@ Fitting 5 folds for each of 24 candidates, totalling 120 fits
     </div>
 </div>
 </div>
-
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
@@ -3612,6 +3596,7 @@ Parameters: { "early_stopping_rounds" } might not be used.
 </div>
 </div>
 
+    </details>
 </div>
     
 
@@ -3621,7 +3606,9 @@ Parameters: { "early_stopping_rounds" } might not be used.
 <h2 id="Conclusiones">
 <a class="anchor" href="#Conclusiones" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusiones<a class="anchor-link" href="#Conclusiones"> </a>
 </h2>
-<p>Luego de realizar distintas formas de preprocesamiento a los datos para los distintos algoritmos candidatos, habiendo aplicado optimización de features y de hiperparámetros, podemos concluir que el mejor algoritmo para la creación del modelo es: XGBoost.</p>
+<p>Luego de realizar distintas formas de preprocesamiento a los datos para los distintos algoritmos candidatos, habiendo aplicado optimización de features y de hiperparámetros, podemos concluir que el mejor algoritmo para la creación del modelo en cuanto a la exactitud es: XGBoost con parámetros los siguientes parámetros 'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 350. Los predictores utilizados fueron los obtenidos con el enfoque evolutivo para feature selection</p>
+<p>La creación de componentes principales para luego generar modelos con random forest y XGBoost obtuvo una performance menor que la obtenida por los modelos generados con estos mismos algoritmos utilizando los atributos originales (con las transformaciones realizadas anteriormente).</p>
+<p>No obstante, el algoritmo KNN (con k=1 y distancia euclídea) obtuvo una exactitud comparable (0.928 contra 0.943), y como el dataset es uno muy pequeño, este modelo podría ser considerado como opción válida (para datasets grandes, el consumo de memoria y de procesamiento para hacer predicciones es muy alto) si la explicabilidad del modelo es importante para el cliente.</p>
 
 </div>
 </div>
