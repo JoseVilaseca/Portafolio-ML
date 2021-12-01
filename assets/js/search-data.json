@@ -174,9 +174,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -187,13 +184,20 @@
   
 
   
+
+  
+  
+
+  
+  
+
   
 
   
   
 
   
-      ,"page9": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://josevilaseca.github.io/Portafolio-ML/robots.txt",
