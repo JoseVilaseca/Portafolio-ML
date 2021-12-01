@@ -4,8 +4,5 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Actualmente soy un estudiante de Ingeniería en Informática y trabajo como científico de datos y desarrollador de aplicaciones desde el año 2020. El propósito de este portafolio es exponer algunos proyectos realizados en relación a Machine Learning.
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
