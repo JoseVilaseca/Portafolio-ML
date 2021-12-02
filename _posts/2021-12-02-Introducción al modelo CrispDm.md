@@ -8,15 +8,6 @@ title: Introducción al modelo CrispDm
 
 ## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca)
 
-## Índice
-1. [Introducción](#Introducción)
-2. [Crisp DM](#Crisp-DM)
-3. [Entendimiento del Negocio](#Entendimiento-del-Negocio)
-4. [Entendimiento de los Datos](#Entendimiento-de-los-Datos)
-5. [Preparación de los Datos](#Preparación-de-los-Datos)
-6. [Modelado](#Modelado)
-7. [Caso de estudio 1](#Caso-de-estudio-1)
-8. [Artículos publicados y presentaciones realizadas](#Artículos-publicados-y-presentaciones-realizadas)
 
 
 
