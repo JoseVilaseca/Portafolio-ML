@@ -94,7 +94,7 @@ window.onload = wrap_img;
 
 <p><strong>Hierarchical clustering</strong></p>
 
-<p>El clustering jerárquico es un método de análisis de clusters que busca construir una jerarquía de clusters. Este tipo de clustering se basa en la idea que explica que un objeto está más relacionado con un ejemplo cercano que con uno que está a una distancia mayor. Por lo tanto, el clustering jerárquico conecta objetos o ejemplos basándose en la distancia entre ambos. A distancias diferentes, se formarán distintos clusters, que se pueden representar utilizando un dendograma.</p>
+<p>El clustering jerárquico es un método de análisis de clusters que busca construir una jerarquía de clusters. Este tipo de clustering se basa en la idea que explica que un objeto está más relacionado con un objeto cercano que con uno que está a una distancia mayor. Por lo tanto, el clustering jerárquico conecta objetos o ejemplos basándose en la distancia entre ambos. A distancias diferentes, se formarán distintos clusters, que se pueden representar utilizando un dendograma.</p>
 
 <p>Existen 2 estrategias para clustering jerárquico:</p>
 
@@ -106,7 +106,7 @@ window.onload = wrap_img;
 
 <p><strong>K-Means</strong></p>
 
-<p>K-means es un tipo de clustering en el que el número de clusters a generar es un parámetro del algoritmo (k). Este algoritmo iniciará escogiendo k puntos aleatorios del dataset (centroides) y asignando un cluster a cada punto dependiendo de qué centroide esté más cerca de él. Luego, de forma iterativa, se vuelven a calcular los centroides tal que estos centroides (no necesariamente pertenecientes al dataset) minimicen la suma de las distancias a todos los puntos del cluster. Luego, se reclusterizan los puntos dependiendo de la proximidad de los centroides recalculados. La heurística termina cuando los centroides se hayan estabilizado o luego de un número máximo de iteraciones. Este algoritmo no siempre devuelve los mismos agrupamientos debido a la inicialización randómica de los centroides, por lo que es una buena práctica correr el algoritmo múltiples veces.</p>
+<p>K-means es un tipo de clustering en el que el número de clusters a generar es un parámetro del algoritmo (k). Este algoritmo iniciará escogiendo k puntos aleatorios del dataset (centroides) y asignando un cluster a cada punto del dataset dependiendo de qué centroide esté más cerca de él. Luego, de forma iterativa, se vuelven a calcular los centroides tal que estos centroides (no necesariamente pertenecientes al dataset) minimicen la suma de las distancias a todos los puntos del cluster. Luego, se reclusterizan los puntos dependiendo de la proximidad de los centroides recalculados. La heurística termina cuando los centroides se hayan estabilizado o luego de un número máximo de iteraciones. Este algoritmo no siempre devuelve los mismos agrupamientos debido a la inicialización randómica de los centroides, por lo que es una buena práctica correr el algoritmo múltiples veces.</p>
 
 <p><strong>Ejercicio</strong></p>
 
