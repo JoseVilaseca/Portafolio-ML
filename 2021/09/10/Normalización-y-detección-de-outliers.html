@@ -86,13 +86,15 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><strong>Rapid Miner outlier detection and normalization tutorial.</strong></p>
+    <h1 id="rapid-miner-outlier-detection-and-normalization-tutorial">Rapid Miner outlier detection and normalization tutorial.</h1>
+
+<h2 id="ejercicio-1">Ejercicio 1</h2>
 
 <p>Se aplica normalización para luego aplicar el cálculo de las distancias para detectar a los outliers. Siempre se debe normalizar previo al cálculo de los outliers por el hecho de que los diferentes atributos suelen no tener la misma unidad o escala. Para la normalización se utiliza la transformación z.</p>
 
 <p>El operador detect outliers detectará los 10 ejemplos que se alejen más del resto. En el flujo, luego colocamos un filter para remover los 10 outliers antes mencionados.</p>
 
-<p><strong>Ejercicio 2</strong></p>
+<h2 id="ejercicio-2">Ejercicio 2</h2>
 
 <p>El dataset posee 13 atributos sin incluir a la variable objetivo. Estos describen distintos elementos de la composición de vinos para luego poder clasificarlos.</p>
 
@@ -102,25 +104,25 @@ window.onload = wrap_img;
 
 <p>Para algunos atributos, la distribución parece ser normal (ash, alcalinity of ash, proanthocyanins), mientras que algunas otras parecen tener un sesgo hacia la derecha (por ejemplo malic acid y proline), pero no es muy grave tampoco.</p>
 
-<p><strong>Creación del modelo con naive bayes.</strong></p>
+<h2 id="creación-del-modelo-con-naive-bayes">Creación del modelo con naive bayes.</h2>
 
 <p>Al visualizar objetivamente la matriz de confusión, los resultados no variaron al aplicar la normalización. Con ambos tipos de normalización (z score y min-max), los resultados fueron los mismos.</p>
 
-<p>Flujo de rapidminer:</p>
+<h2 id="flujo-de-rapidminer">Flujo de rapidminer:</h2>
 
 <p>El para los Split data, se utilizó la misma seed y la misma proporción (70/30) para que los conjuntos de entrenamiento y testeo sean los mismos para ambas pruebas, con la diferencia que uno estará normalizado y otro no.</p>
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-10-Normalización-y-detección-de-outliers/media/image1.jpg" alt="" /></p>
 
-<p>Matriz sin normalizado</p>
+<h3 id="matriz-sin-normalizado">Matriz sin normalizado</h3>
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-10-Normalización-y-detección-de-outliers/media/image2.jpg" alt="" /></p>
 
-<p>Matriz con normalizado</p>
+<h3 id="matriz-con-normalizado">Matriz con normalizado</h3>
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-10-Normalización-y-detección-de-outliers/media/image3.jpg" alt="" /></p>
 
-<h1 id="conclusiones">Conclusiones</h1>
+<h2 id="conclusiones">Conclusiones</h2>
 
 <p>El normalizado no afecta los resultados para este caso en particular. Esto se debe al algoritmo que utilizamos principalmente.</p>
 
