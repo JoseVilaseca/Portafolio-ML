@@ -86,17 +86,17 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>KNN Iris</p>
+    <h1 id="knn-iris">KNN Iris</h1>
 
 <p>Se crea un nuevo proceso con el dataset Iris de UCI. Luego, se grafican petal length y petal width en un gráfico bidimensional, diferenciando las diferentes especies por color.</p>
 
-<p><img src="assets/img/2021-09-16-KNN---Dataset-Iris/media/image1.png" alt="Gráfico, Gráfico de dispersión Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-16-KNN---Dataset-Iris/media/image1.png" alt="" /></p>
 
 <p>Claramente la especie iris-setosa es muy distinta a las otras 2 y por lo tanto un modelo construido con knn debería reconocer perfectamente a todos los ejemplos de dicha clase. Para el caso de iris versicolor e iris virginica, la separación es más difusa, y es muy probable que nuestro modelo de knn cometa errores al clasificar algunos ejemplos de ellas.</p>
 
 <p>En cuanto a las tareas de acondicionamiento necesarias para este dataset y este algoritmo, se deberán normalizar todos los atributos dado que KNN trabaja con distancias. Una diferencia en escala entre los atributos podría perjudicar substancialmente la performance del modelo.</p>
 
-<p>Operador Knn de rapidminer</p>
+<h2 id="operador-knn-de-rapidminer">Operador Knn de rapidminer</h2>
 
 <p>K: Refiere a la cantidad de vecinos más cercanos que utilizará el algoritmo para hacer una predicción sobre un ejemplo no visto.</p>
 
@@ -106,7 +106,7 @@ window.onload = wrap_img;
 
 <p>Función de medida: Se podrá seleccionar un tipo de distancia tal que sea acorde con el tipo de medida que se seleccionó anteriormente. Por ejemplo para datos numéricos, se puede utilizar la distancia euclídea, mientras que para datos nominales se puede utilizar la Jaccard similarity.</p>
 
-<p><strong>Entrenamiento de modelo y resultados</strong></p>
+<h2 id="entrenamiento-de-modelo-y-resultados">Entrenamiento de modelo y resultados</h2>
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-16-KNN---Dataset-Iris/media/image2.png" alt="" />K=5</p>
 
@@ -116,7 +116,7 @@ window.onload = wrap_img;
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-16-KNN---Dataset-Iris/media/image5.png" alt="" />K=1 Distancia= Chebychev Distance</p>
 
-<p><strong>Análisis de resultados</strong></p>
+<h2 id="análisis-de-resultados">Análisis de resultados</h2>
 
 <p>Contrario a lo que hubiera pensado, los mejores resultados fueron obtenidos con k=1 para este Split de este dataset. Las distancias de manhattan y euclídea presentaron los mismos resultados para k = 1, mientras que la de chebychev presentó una exactitud levemente menor.</p>
 
