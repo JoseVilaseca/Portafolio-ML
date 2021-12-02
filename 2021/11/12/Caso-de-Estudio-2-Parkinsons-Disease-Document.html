@@ -86,15 +86,15 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><strong>Parkinsons Disease Data Set Case Study</strong></p>
+    <h1 id="parkinsons-disease-data-set-case-study">Parkinsons Disease Data Set Case Study</h1>
 
-<p>1)  Case Study introduction</p>
+<h2 id="case-study-introduction">Case Study introduction</h2>
 
 <p>“Parkinson’s disease is a degenerative brain disorder which usually presents symptoms like stiffness, body tremors, and difficulty maintaining balance and coordination. The symptoms get worse with age and usually start developing around 60 years of age.</p>
 
 <p>There is currently no way to diagnose Parkinson’s using blood or laboratory tests for non-genetic cases. Diagnoses are done using patients’ medical history and neurological exams. It is important to diagnose Parkinson’s early, due to very similar symptoms it has to other diseases which require different treatments.”<sup>[1]</sup></p>
 
-<p>2)  Brief description of the data set and a summary of its attributes</p>
+<h2 id="brief-description-of-the-data-set-and-a-summary-of-its-attributes">Brief description of the data set and a summary of its attributes</h2>
 
 <p>The dataset was created by Max Little (University of Oxford) in collaboration with the National Centre for Voice and Speech (Denver, Colorado), who recorded speech signals.</p>
 
@@ -130,7 +130,7 @@ window.onload = wrap_img;
 
 <p>All attributes but name (pacient name) and status (pacient has the disease (1) or not (0)) are real values. The pacient name is not important as it shouldn’t have any descriptive insight to whether a person has Parkinson or not, so we will later remove that attribute. This makes all our predictors real values.</p>
 
-<p>3)  Initial plan for data exploration</p>
+<h2 id="initial-plan-for-data-exploration">Initial plan for data exploration</h2>
 
 <p>The initial plan is to explore attribute distributions, correlations and detect outliers within the distributions.</p>
 
@@ -142,7 +142,7 @@ window.onload = wrap_img;
 
 <p>The highest correlations between attributes and status are 0.56 (spread1) and 0.53 (PPE).</p>
 
-<p>4)  Feature engineering and data cleaning</p>
+<h2 id="feature-engineering-and-data-cleaning">Feature engineering and data cleaning</h2>
 
 <p>Regarding Data cleaning, not much is required for the selected dataset. We don’t have highly correlated columns and there are no null values. Thus we don’t need to think about which would be the best strategy (imputation, drop column, drop row, etc.). The only cleaning made was to drop the “pacient name” attribute.</p>
 
@@ -160,13 +160,11 @@ window.onload = wrap_img;
 
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Caso-de-Estudio-2---Parkinsons-Disease-Document/media/image5.png" alt="" /> <img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-11-12-Caso-de-Estudio-2---Parkinsons-Disease-Document/media/image6.png" alt="" /></p>
 
-<p>5)  Key findings and insights</p>
+<h2 id="key-findings-and-insights">Key findings and insights</h2>
 
 <p>By comparing the distributions of parkinson patients’ attributes with non- parkinson patients’ attributes, we can identify some insights which were previously mentioned. The range of values in almost all of the attributes is undeniably greater than the one In attributes of non- parkinson patients. This could be a key insight when trying to predict a parkinson patient. For example, if spread1 is greater than -4, we could infer that the patient has parkinson. Also, the higher spread1 is, the more likely a given patient has parkinson. Also, outlier points tend to correspond with patients who have the disease.</p>
 
-<p>6)  Formulate hypothesis and</p>
-
-<p>7)  Conduct a formal significance tests, discussing results</p>
+<h2 id="hypothesis-testing-and-formal-significance-tests">Hypothesis Testing and Formal Significance Tests</h2>
 
 <p>1-Null hypothesis: The mean of spread1 for parkinsons patients is the same than the mean of spread1 for non-parkinsons patients.</p>
 
@@ -192,13 +190,13 @@ window.onload = wrap_img;
 
 <p>The null hypothsis is rejected, so we can’t confirm with a 95% confidence that the mean of DFA for parkinsons’ patients is larger than the mean of DFA for non-parkinsons’ patients by at least 1 standard deviation of the attributes distribution.</p>
 
-<p>8)  Suggestions for next steps in analyzing this data.</p>
+<h2 id="suggestions-for-next-steps-in-analyzing-this-data">Suggestions for next steps in analyzing this data.</h2>
 
 <p>I would suggest to analyze and compare the distributions of attributes within the same attribute types (attributes that measure the same thing). It is important to separate the distributions by status, so we can check the distribution for parkinsons patients and non-parkinsons patients.</p>
 
 <p>Also, we could implement Principal component analysis to check which attributes have the greatest variance.</p>
 
-<p>9)  Summary of quality of data</p>
+<h2 id="summary-of-quality-of-data">Summary of quality of data</h2>
 
 <p>I believe the quality of the dataset is decent. There are no missing values and you can visually have an idea of which attributes are going to have a greater effect on predictions (such as spread1).</p>
 
