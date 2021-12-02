@@ -1,5 +1,10 @@
-
-
+---
+toc: true
+layout: post
+description: Introducción a conceptos necesarios.
+categories: [markdown]
+title: An Example Markdown Post
+---
 
 ## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca)
 
@@ -27,6 +32,7 @@ El proceso CRISP-DM (Cross-Industry Standard Process for Data Mining) describe l
 <p align="center">
   <img src="./Images/Crisp.png" width="60%">
 </p>
+![]({{ site.baseurl }}/_posts/Images/Crisp.png "Crisp DM cycle")
 
 A continuación se explicará qué se debe considerar en cada etapa del proceso CRISP-DM.
 
