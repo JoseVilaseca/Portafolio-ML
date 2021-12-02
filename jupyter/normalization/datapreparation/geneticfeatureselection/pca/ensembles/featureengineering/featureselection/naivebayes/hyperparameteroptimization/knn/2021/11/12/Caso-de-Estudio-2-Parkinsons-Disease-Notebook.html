@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Construcción de un modelo que pueda discriminar entre personas con la enfermedad o no utilizando muestras de voz" />
 <meta property="og:description" content="Construcción de un modelo que pueda discriminar entre personas con la enfermedad o no utilizando muestras de voz" />
-<link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" />
-<meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" />
+<link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/jupyter/normalization/datapreparation/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" />
+<meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/jupyter/normalization/datapreparation/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" />
 <meta property="og:site_name" content="Portafolio José Vilaseca" />
 <meta property="og:image" content="https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-12T00:00:00-06:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-11-12T00:00:00-06:00","url":"https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html","@type":"BlogPosting","image":"https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png","headline":"Caso de Estudio 2 - Parkinsons Disease","dateModified":"2021-11-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html"},"description":"Construcción de un modelo que pueda discriminar entre personas con la enfermedad o no utilizando muestras de voz","@context":"https://schema.org"}</script>
+{"datePublished":"2021-11-12T00:00:00-06:00","url":"https://josevilaseca.github.io/Portafolio-ML/jupyter/normalization/datapreparation/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html","@type":"BlogPosting","image":"https://josevilaseca.github.io/Portafolio-ML/images/some_folder/your_image.png","headline":"Caso de Estudio 2 - Parkinsons Disease","dateModified":"2021-11-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/jupyter/normalization/datapreparation/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html"},"description":"Construcción de un modelo que pueda discriminar entre personas con la enfermedad o no utilizando muestras de voz","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portafolio-ML/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://josevilaseca.github.io/Portafolio-ML/feed.xml" title="Portafolio José Vilaseca" /><link rel="shortcut icon" type="image/x-icon" href="/Portafolio-ML/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -88,6 +88,12 @@ window.onload = wrap_img;
         <a class="category-tags-link" href="/Portafolio-ML/categories/#jupyter">jupyter</a>
         &nbsp;
       
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#Normalization">Normalization</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portafolio-ML/categories/#DataPreparation">DataPreparation</a>
+        &nbsp;
+      
         <a class="category-tags-link" href="/Portafolio-ML/categories/#GeneticFeatureSelection">GeneticFeatureSelection</a>
         &nbsp;
       
@@ -120,19 +126,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/JoseVilaseca/Portafolio-ML/tree/master/_notebooks/2021-11-12-Caso de Estudio 2-  Parkinsons Disease Notebook.ipynb" role="button" target="_blank">
+    <a href="https://github.com/JoseVilaseca/Portafolio-ML/tree/master/_notebooks/2021-11-12-Caso de Estudio 2 Parkinsons Disease Notebook.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/Portafolio-ML/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/JoseVilaseca/Portafolio-ML/master?filepath=_notebooks%2F2021-11-12-Caso+de+Estudio+2-++Parkinsons+Disease+Notebook.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/JoseVilaseca/Portafolio-ML/master?filepath=_notebooks%2F2021-11-12-Caso+de+Estudio+2+Parkinsons+Disease+Notebook.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Portafolio-ML/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/JoseVilaseca/Portafolio-ML/blob/master/_notebooks/2021-11-12-Caso de Estudio 2-  Parkinsons Disease Notebook.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/JoseVilaseca/Portafolio-ML/blob/master/_notebooks/2021-11-12-Caso de Estudio 2 Parkinsons Disease Notebook.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Portafolio-ML/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -167,7 +173,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-11-12-Caso de Estudio 2-  Parkinsons Disease Notebook.ipynb
+# file to edit: _notebooks/2021-11-12-Caso de Estudio 2 Parkinsons Disease Notebook.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -3634,7 +3640,7 @@ Parameters: { "early_stopping_rounds" } might not be used.
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/Portafolio-ML/jupyter/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" hidden></a>
+</script><a class="u-url" href="/Portafolio-ML/jupyter/normalization/datapreparation/geneticfeatureselection/pca/ensembles/featureengineering/featureselection/naivebayes/hyperparameteroptimization/knn/2021/11/12/Caso-de-Estudio-2-Parkinsons-Disease-Notebook.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
