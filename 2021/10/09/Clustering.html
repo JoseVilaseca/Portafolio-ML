@@ -86,13 +86,13 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><strong>Clustering</strong></p>
+    <h1 id="clustering">Clustering</h1>
 
 <p>En este post me gustaría hablar sobre diferentes estrategias de clustering de datos para problemas supervisados y no supervisados.</p>
 
 <p>Previo a un análisis de casos especiales, me parece pertinente hacer una breve introducción al concepto de clustering. Supongamos que se tiene un conjunto de datos estructurado o tabular como por ejemplo un archivo .csv. En él habrá una gran cantidad de filas o ejemplos y otra cantidad de columnas o atributos. ¿Cómo podríamos hacer para extraer información relevante de este conjunto de datos? Si nuestro dataset contiene información de clientes de un supermercado y de los artículos que este compra, algo que podríamos querer hacer es agrupar a diferentes tipos de clientes para poder realizar ofertas direccionadas. El proceso de agrupar o armar clusters es lo que se conoce como clustering y tiene el propósito de extraer información mediante diferentes formas de agrupación.</p>
 
-<p><strong>Hierarchical clustering</strong></p>
+<h2 id="hierarchical-clustering">Hierarchical clustering</h2>
 
 <p>El clustering jerárquico es un método de análisis de clusters que busca construir una jerarquía de clusters. Este tipo de clustering se basa en la idea que explica que un objeto está más relacionado con un objeto cercano que con uno que está a una distancia mayor. Por lo tanto, el clustering jerárquico conecta objetos o ejemplos basándose en la distancia entre ambos. A distancias diferentes, se formarán distintos clusters, que se pueden representar utilizando un dendograma.</p>
 
@@ -104,31 +104,29 @@ window.onload = wrap_img;
 
 <p>Existen diferentes modos de medir las distancias entre clusters. Cada una tiene sus casos de aplicación particular, pero en el siguiente ejercicio, analizaremos el propósito de 2 de estos modos (complete link y single link).</p>
 
-<p><strong>K-Means</strong></p>
+<h2 id="k-means">K-Means</h2>
 
 <p>K-means es un tipo de clustering en el que el número de clusters a generar es un parámetro del algoritmo (k). Este algoritmo iniciará escogiendo k puntos aleatorios del dataset (centroides) y asignando un cluster a cada punto del dataset dependiendo de qué centroide esté más cerca de él. Luego, de forma iterativa, se vuelven a calcular los centroides tal que estos centroides (no necesariamente pertenecientes al dataset) minimicen la suma de las distancias a todos los puntos del cluster. Luego, se reclusterizan los puntos dependiendo de la proximidad de los centroides recalculados. La heurística termina cuando los centroides se hayan estabilizado o luego de un número máximo de iteraciones. Este algoritmo no siempre devuelve los mismos agrupamientos debido a la inicialización randómica de los centroides, por lo que es una buena práctica correr el algoritmo múltiples veces.</p>
 
-<p><strong>Ejercicio</strong></p>
+<h2 id="ejercicio">Ejercicio</h2>
 
 <p>Se desea agrupar los ejemplos del dataset ripley provisto por rapidminer en clusters.</p>
 
 <p>Nota: Es de crucial importancia normalizar los atributos previo a realizar clustering, pues las formas de clustering discutidas utilizan la distancia euclídea para medir la similaridad entre ejemplos o clusters.</p>
 
-<p><img src="assets/img/2021-10-09-Clustering/media/image1.png" alt="Diagrama Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-10-09-Clustering/media/image1.png" alt="" /></p>
 
-<p><strong>Agglomerative clustering</strong></p>
+<h2 id="agglomerative-clustering">Agglomerative clustering</h2>
 
 <p>Para el agglomerative clustering, se decide hacer una comparación entre la utilización entre complete link y single link.</p>
 
 <p>Complete link y distancia euclídea</p>
 
-<p><img src="assets/img/2021-10-09-Clustering/media/image2.png" alt="Gráfico, Gráfico de dispersión Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-10-09-Clustering/media/image2.png" alt="" /></p>
 
 <p>Single link y distancia euclídea</p>
 
-<p><img src="assets/img/2021-10-09-Clustering/media/image3.png" alt="Gráfico, Gráfico de dispersión Descripción generada automáticamente" /></p>
-
-<p>Como se puede observar en las imágenes anteriores, la utilización de comlpete link obtiene clusters más parejos (uniformes) y distancias intraclusters medias menores que el single link. Aquí ya podemos entender el propósito de la utilización de cada uno.</p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-10-09-Clustering/media/image3.png" alt="" />Como se puede observar en las imágenes anteriores, la utilización de comlpete link obtiene clusters más parejos (uniformes) y distancias intraclusters medias menores que el single link. Aquí ya podemos entender el propósito de la utilización de cada uno.</p>
 
 <p>Si se desea obtener clusters uniformes y parejos, la mejor forma de medir distancias entre clusters es complete link.</p>
 
@@ -150,7 +148,7 @@ window.onload = wrap_img;
 
 <p>Max leaf size=1.</p>
 
-<p><img src="assets/img/2021-10-09-Clustering/media/image4.png" alt="Gráfico, Gráfico de dispersión Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-10-09-Clustering/media/image4.png" alt="" /></p>
 
 <p><strong>Resultados:</strong></p>
 
