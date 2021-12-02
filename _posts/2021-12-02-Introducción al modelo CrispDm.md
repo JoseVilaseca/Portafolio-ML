@@ -149,8 +149,40 @@ Las máquinas de soporte vectorial son un tipo de algoritmo de machine learning 
 El propósito de este tipo de algoritmo es utilizar vectores de soporte (puntos de ambas clases que actúen como límites de su clase), un tipo de kernel (lineal, polinómico, radial, etc) y una constante C (definirá la flexibilidad con la que permitiremos violaciones respecto al márgen o frontera que se utilizará para la clasificación) para generar una función n-dimensional que separe a ambas clases de la mejor manera posible.
 
 
+## Evaluación
+La etapa de evaluación o validación consiste en entender si los modelos generados son buenos o no. A simple vista, la oración anterior parecería no suponer un desafío, pero en realidad la evaluación de modelos posee muchas aristas a considerar si se quiere realizar de una forma correcta.
+
+### Matriz de Confusión y Métricas
+Luego de aplicar un modelo a ejemplos del dataset de testeo, se podrá comparar las clases reales de dichos ejemplos con las clases predichas por el modelo. Esta comparación entre clase predicha y clase real se puede ilustrar en una matriz llamada matriz de confusión. Como regla simple, un modelo posee una buena performance si la mayor cantidad de valores se concentran en la diagonal mayor de la matriz.
+
+![]({{ site.baseurl }}/images/CMMala.png "Matriz de confusión")
+![]({{ site.baseurl }}/images/CMBuena.png "Matriz de confusión")
+
+El modelo con el que se calculó la primera matriz tiene una performance menor que el modelo con el que se calculó la segunda matriz de confusión.
+También, se pueden ver porcentajes de accuracy, recall y precision. Estas son algunas métricas que evalúan a nuestro modelo de diferente forma. 
+
+Accuracy o exactitud del modelo se calcula como el total de ejemplos predichos correctamente sobre el total de ejemplos. 
+
+La precisión de una clase (supongamos la clase 0 para simplificar la explicación) se calcula como el total de ejemplos de la clase 0 (True/Actual 0) que fueron clasificados como clase 0 (Predicted 0) sobre la suma de todos los ejemplos que fueron clasificados como clase 0. Una precision baja quiere decirt que nuestro modelo está asignando la clase 0 a muchos objetos que en realidad no pertenecen a la clase 0.
+
+El recall de una clase (supongamos nuevamente la clase 0) se calcula como el total de ejemplos de la clase 0 (True/Actual 0) que fueron clasificados como clase 0 (Predicted 0) sobre la suma de todos los ejemplos reales de la clase 0. Un recall bajo nos dice que se nos "escapan" ejemplos de la clase 0 y terminan siendo clasificados como otras clases.
+
+Dependiendo del problema particular, se intentará maximizar alguna de estas 2 métricas. También, se puede buscar maximizar ambas, para lo que exste otra métrica llamada f1 score (media armónica entre precision y recall).
 
 
+
+### Curva ROC y AUC
+La curva ROC y el área bajo esta curva sirven como indicadores de la performance de un modelo. Se grafica true positive rate en función del false positive rate. Como regla básica, una curva ROC de un modelo bueno es una que se acerca lo más posible al punto 0,1 de la gráfica (AUC = 1). Una curva mala es una recta entre los puntos 0,0 y 1,1 (AUC = 0,5). 
+![]({{ site.baseurl }}/images/ROC.png "Curva ROC")
+
+### Contaminación Accidental
+La contaminación accidental es un fenómeno que causa que las estimaciones de las métricas que realizamos para validar nuestros modelos no sean realistas, siendo más optimistas que el rendimiento verdadero que tendrá nuestro modelo. Un ejemplo de contaminación accidental es normalizar todo el conjunto de datos previo a realizar los splits de entrenamiento/test. Esto ocurre porque estamos incluyendo indicios (media y la varianza por ejemplo) del set de test en nuestro set de entrenamiento. Para más información sobre este fenómeno y cómo prevenirlo, invito a leer el caso de estudio 3, donde se toma especial precaución para no contaminar accidentalmente.
+
+
+## Despliegue de Modelos
+Luego de que un modelo haya pasado satisfactoriamente todas las etapas previas y se concluye que el modelo es uno bueno para utilizar en producción, comienza la etapa de despliegue. En esta etapa, se provee una api o cualquier tipo de interfaz para que el cliente/los usuarios de una aplicación puedan llamar a nuestro modelo para realizar predicciones. Esta no es una etapa estática, ya que los modelos deben ser evaluados periódicamente para asegurarnos que no estén desactualizados y que no exista un sesgo en las predicciones realizadas. 
+
+En el repositorio del artículo publicado a continuación, se muestra cómo se puede hacer para desplegar un modelo de clasificación de imágenes (Python-Keras-TensorFlow) en la nube.
 
 ## Artículos publicados y presentaciones realizadas
 
