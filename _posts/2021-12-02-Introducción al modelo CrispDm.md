@@ -41,13 +41,9 @@ Luego de entender el negocio y las posibles aristas por las que se podrá proseg
 En  este paso, deberemos estudiar los tipos de los atributos, ver qué tipo de solución requiere el problema a resolver, ¿es de clasificación, regresión o clustering? También, se deben analizar las distribuciones de todos los atributos. Por último, se deben generar hipótesis sobre relaciones en los datos que luego deberán ser probadas en el paso del modelado.
 
 
-<p align="center">
-  <img src="Images/Histogramas.png" width="60%">
-</p>
+
 ![]({{ site.baseurl }}/images/Histogramas.png "Histograma")
-<p align="center">
-  <img src="Images/Seaborn.png" width="60%">
-</p>
+
 ![]({{ site.baseurl }}/images/Seaborn.png "Seaborn pairplot")
 
 
@@ -60,16 +56,12 @@ Debido a lo antes mencionado, hay varias aristas a recorrer en la etapa de la pr
 Existe una gran cantidad de algoritmos que obtienen mejores resultados cuando rangos de los predictores estén normalizados o estandarizados. Existen muchas formas de normalizar los datos pero a lo largo del portafolio, utilizaré las 2 más comunes mencionadas a continuación
 #### Normalización Min-Max
 Este tipo de normalización utiliza los valores mínimo y máximo del conjunto y utiliza la siguiente transformación para obtener los nuevos valores de nuestro predictor. Los posibles valores pertenecen al rango [0,1].
-<p align="center">
-  <img src="Images/MinMax.png" width="50%">
-</p>
+
 ![]({{ site.baseurl }}/images/MinMax.png "MinMax")
 
  #### Estandarización o Transformación Z
  Dicha técnica de normalizado refiere a la utilización de la media y de la desviación estándar de un atributo para realizar la siguiente transformación. La distribución resultante tendrá media 0 y desviación estandar 1.
-<p align="center">
-  <img src="Images/Estandarizacion.png" width="50%">
-</p>
+
 ![]({{ site.baseurl }}/images/Estandarizacion.png "Estandarizacion")
 
 ### Manejo de valores faltantes o nulos
@@ -95,9 +87,7 @@ Una estrategia más compleja, pero generalmente más aproximada es utilizar un m
 
 ### Outliers
 Los outliers son valores que se alejan significativamente del resto de la muestra. Dependiendo de nuestra aplicación en particular, estos casos deberán ser removidos o tratados con especial cuidado porque pueden llegar a ser claves para detectar algún fenómeno que estemos tratando de predecir (por ejemplo detección de fraude). 
-<p align="center">
-  <img src="Images/Outliers.png" width="80%">
-</p>
+
 ![]({{ site.baseurl }}/images/Outliers.png "Outliers")
 
 ### Muestreo para dasets desbalanceados
@@ -110,14 +100,10 @@ Dos estrategias posibles para atacar estos casos es aplicar submuestreo (undersa
 
 ### Transformaciones para atributos con distribución sesgada
 Para distribuciones fuertemente sesgadas (skewed), aplicar transformaciones a la misma generalmente mejora la performance de los modelos entrenados con dichos datos. Dos transformaciones recomendadas son la función logarítmica y la transformación Box-Cox.
-<p align="center">
-  <img  src="Images/PreBoxCox.png" width="80%">
-</p>
+
 ![]({{ site.baseurl }}/images/PreBoxCox.png "PreBoxCox")
 
-<p align="center">
-  <img   src="Images/PostBoxCox.png" width="80%">
-</p>
+
 ![]({{ site.baseurl }}/images/PostBoxCox.png "PostBoxCox")
 
 
