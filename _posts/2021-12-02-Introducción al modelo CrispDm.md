@@ -1,7 +1,7 @@
 
 
 
-## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca/josevilaseca.github.io)
+## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca)
 
 ## Índice
 1. [Introducción](#Introducción)
