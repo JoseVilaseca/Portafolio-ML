@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Introducción a conceptos necesarios.
-categories: [markdown]
-title: An Example Markdown Post
+description: Introducción a conceptos necesarios de la industria.
+categories: [markdown, CrispDM, BusinessUnderstanding, DataUnderstanding, DataPreparation, Normalization, LinearRegression, LogisticRegression, LinearDiscriminantAnalysis, DecisionTrees, SVM]
+title: Crisp DM
 ---
 
 ## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca)
@@ -29,10 +29,8 @@ El desarrollo de soluciones que utilicen inteligencia artificial debe ser holist
 ## Crisp DM
 El proceso CRISP-DM (Cross-Industry Standard Process for Data Mining) describe las fases principales de un proyecto de minería/ciencia de datos, incluyendo la relación que existe entre cada etapa. 
 
-<p align="center">
-  <img src="./Images/Crisp.png" width="60%">
-</p>
-![]({{ site.baseurl }}/_posts/Images/Crisp.png "Crisp DM cycle")
+
+![]({{ site.baseurl }}/images/Crisp.png "Crisp DM cycle")
 
 A continuación se explicará qué se debe considerar en cada etapa del proceso CRISP-DM.
 
@@ -55,10 +53,11 @@ En  este paso, deberemos estudiar los tipos de los atributos, ver qué tipo de s
 <p align="center">
   <img src="Images/Histogramas.png" width="60%">
 </p>
+![]({{ site.baseurl }}/images/Histogramas.png "Histograma")
 <p align="center">
   <img src="Images/Seaborn.png" width="60%">
 </p>
-
+![]({{ site.baseurl }}/images/Seaborn.png "Seaborn pairplot")
 
 
 ## Preparación de los Datos
@@ -73,12 +72,14 @@ Este tipo de normalización utiliza los valores mínimo y máximo del conjunto y
 <p align="center">
   <img src="Images/MinMax.png" width="50%">
 </p>
+![]({{ site.baseurl }}/images/MinMax.png "MinMax")
 
  #### Estandarización o Transformación Z
  Dicha técnica de normalizado refiere a la utilización de la media y de la desviación estándar de un atributo para realizar la siguiente transformación. La distribución resultante tendrá media 0 y desviación estandar 1.
 <p align="center">
   <img src="Images/Estandarizacion.png" width="50%">
 </p>
+![]({{ site.baseurl }}/images/Estandarizacion.png "Estandarizacion")
 
 ### Manejo de valores faltantes o nulos
 En un mundo ideal, los datasets no poseerían valores faltantes pero la realidad está bastante alejada de eso. Tanto en datasets utilizados mundialmente (por ejemplo Titanic) como también en datasets de empresas que quieren incorporar ciencia de datos a sus procesos, la presencia de valores nulos es algo común. 
@@ -106,6 +107,7 @@ Los outliers son valores que se alejan significativamente del resto de la muestr
 <p align="center">
   <img src="Images/Outliers.png" width="80%">
 </p>
+![]({{ site.baseurl }}/images/Outliers.png "Outliers")
 
 ### Muestreo para dasets desbalanceados
 Cuando se posee un dataset significativamente desbalanceado, los ejemplos de una de las clases tienen una cardinalidad significativamente menor que la cardinalidad de los ejemplos de la otra clase (para problemas de clasificación binaria). La relación entre ellas puede ser 1:50, 1:100 o incluso más diferencia.
@@ -120,11 +122,12 @@ Para distribuciones fuertemente sesgadas (skewed), aplicar transformaciones a la
 <p align="center">
   <img  src="Images/PreBoxCox.png" width="80%">
 </p>
+![]({{ site.baseurl }}/images/PreBoxCox.png "PreBoxCox")
 
 <p align="center">
   <img   src="Images/PostBoxCox.png" width="80%">
 </p>
-
+![]({{ site.baseurl }}/images/PostBoxCox.png "PostBoxCox")
 
 
 ### Selección de atributos y feature engineering (Utilizado y explicado en casos de estudio y post)
