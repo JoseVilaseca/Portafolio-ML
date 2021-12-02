@@ -86,9 +86,9 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Preparación de datos y modelado para el dataset Titanic</p>
+    <h1 id="preparación-de-datos-y-modelado-para-el-dataset-titanic">Preparación de datos y modelado para el dataset Titanic</h1>
 
-<p>1) Importar librerías y paquetes</p>
+<h2 id="importar-librerías-y-paquetes">Importar librerías y paquetes</h2>
 
 <p>Además de hablar de las librerías y paquetes, me pareció interesante destacar ciertos conceptos que no fueron presentados en la clase y quizás alguna posible mejora para alguna parte del código en el caso de manejar datasets más pesados y más cómputo-dependientes.</p>
 
@@ -102,11 +102,13 @@ window.onload = wrap_img;
 
 <p>También se utiliza la técnica de Gridsearch para tunear los hiperparámetros de los distintos algoritmos. Una mejor alternativa para un caso computacionalmente complejo sería utilizar randomsearch para ubicar los puntos de interés donde es muy probable encontrar óptimos en la cercanía y aplicar gridsearch en espacios pequeños cercanos a dichos puntos de interés.</p>
 
-<p>2)  &gt; Cargar el dataset y mostrarlo</p>
+<h2 id="cargar-el-dataset-y-mostrarlo">Cargar el dataset y mostrarlo</h2>
 
 <p>Para realizar estas dos tareas, se utilizan las funcionalidades de pandas llamadas read_csv para leer un archivo csv y cargarlo utilizando la estructura de datos llamada dataframe y head como forma de imprimir las primeras x filas (5 por defecto) del dataset de una forma prolija.</p>
 
-<p>3)  &gt; Gestionar los valores faltantes</p>
+<p>##</p>
+
+<h2 id="gestionar-los-valores-faltantes">Gestionar los valores faltantes</h2>
 
 <p>Se utiliza la función pd.isnull para identificar los valores faltantes de cada columna. Se dropean las columnas Cabin y ticket por la gran cantidad de valores faltantes.</p>
 
@@ -114,13 +116,15 @@ window.onload = wrap_img;
 
 <p>Para el atributo fare, la distribución está fuertemente sesgada hacia la derecha, por lo que se elige la mediana como valor a imputar. Alternativamente, se podría elegir aplicar una transformación a los datos para que su distribución se asemeje más a una normal. 2 estrategias para esto podrían ser aplicar el logaritmo natural a los valores del atributo o alguna de las variantes de la transformación “Box and Cox” (1964) presentada en applied-predictivemodeling, presente en la bibliografía del curso.</p>
 
-<p>4)  &gt; Graficar los datos</p>
+<h2 id="graficar-los-datos">Graficar los datos</h2>
 
 <p>Se grafican varios atributos en relación al atributo a predecir para formar unas hipótesis iniciales sobre si algún atributo está correlacionado con la variable a predecir. Las librerías para</p>
 
 <p>hacer esto son seaborn y matplotlib.pyplot. Aquí se pueden observar ratios como la proporción de mujeres que sobrevivieron o indicios como qué clase es la que presentó más proporción de personas que sobrevivieron.</p>
 
-<p>5)  &gt; Feature Engineering</p>
+<p>##</p>
+
+<h2 id="feature-engineering">Feature Engineering</h2>
 
 <p>En la parte de feature engineering, lo primero que se hace es encodear los atributos categóricos a valores enteros. Se podría realizar mediante one hot encoding pero en este notebok, se decide no hacerlo.</p>
 
@@ -132,7 +136,7 @@ window.onload = wrap_img;
 
 <p>Luego, se normalizan los datos con el standard scaler (estandarización Z).</p>
 
-<h1 id="pasos-opcionales">Pasos Opcionales</h1>
+<h2 id="pasos-opcionales">Pasos Opcionales</h2>
 
 <p>Como no se requiere, no voy a comentar todos los aspectos sobre la parte de modelado, predicción y evaluación de rendimiento, pero sí los incluí en el código y me interesaría remarcar algunos puntos.</p>
 
