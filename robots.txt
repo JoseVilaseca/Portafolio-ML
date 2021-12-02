@@ -1,1 +1,1 @@
-Sitemap: https://josevilaseca.github.io/Portafolio-ML/sitemap.xml
+Sitemap: /Portafolio-ML/sitemap.xml
