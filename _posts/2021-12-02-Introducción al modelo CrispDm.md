@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Introducción a conceptos necesarios de la industria.
 categories: [markdown, CrispDM, BusinessUnderstanding, DataUnderstanding, DataPreparation, Normalization, LinearRegression, LogisticRegression, LinearDiscriminantAnalysis, DecisionTrees, SVM]
-title: Crisp DM
+title: Introducción al modelo CrispDm
 ---
 
 ## <span align=left>[LinkedIn](https://www.linkedin.com/in/jose-luis-vilaseca/)</span> <span align=right>[GitHub](https://github.com/JoseVilaseca)
