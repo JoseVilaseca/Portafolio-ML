@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      14 min read
     
 </span></p>
 
@@ -166,6 +166,14 @@ window.onload = wrap_img;
 </li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#evaluación">Evaluación</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#matriz-de-confusión-y-métricas">Matriz de Confusión y Métricas</a></li>
+<li class="toc-entry toc-h3"><a href="#curva-roc-y-auc">Curva ROC y AUC</a></li>
+<li class="toc-entry toc-h3"><a href="#contaminación-accidental">Contaminación Accidental</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#despliegue-de-modelos">Despliegue de Modelos</a></li>
 <li class="toc-entry toc-h2"><a href="#artículos-publicados-y-presentaciones-realizadas">Artículos publicados y presentaciones realizadas</a></li>
 </ul><h2 id="linkedin-github">
 <a class="anchor" href="#linkedin-github" aria-hidden="true"><span class="octicon octicon-link"></span></a><span align="left"><a href="https://www.linkedin.com/in/jose-luis-vilaseca/">LinkedIn</a></span> <span align="right"><a href="https://github.com/JoseVilaseca">GitHub</a></span>
@@ -315,6 +323,43 @@ window.onload = wrap_img;
 <p>Las máquinas de soporte vectorial son un tipo de algoritmo de machine learning relativamente moderno (las primeras implementeciones se desarrollaron en los años 90). Este es un algoritmo para problemas de clasificación binaria (en su implementación básica, pues existen extensiones que amplian el algoritmo para problemas multiclase).</p>
 
 <p>El propósito de este tipo de algoritmo es utilizar vectores de soporte (puntos de ambas clases que actúen como límites de su clase), un tipo de kernel (lineal, polinómico, radial, etc) y una constante C (definirá la flexibilidad con la que permitiremos violaciones respecto al márgen o frontera que se utilizará para la clasificación) para generar una función n-dimensional que separe a ambas clases de la mejor manera posible.</p>
+
+<h2 id="evaluación">
+<a class="anchor" href="#evaluaci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluación</h2>
+<p>La etapa de evaluación o validación consiste en entender si los modelos generados son buenos o no. A simple vista, la oración anterior parecería no suponer un desafío, pero en realidad la evaluación de modelos posee muchas aristas a considerar si se quiere realizar de una forma correcta.</p>
+
+<h3 id="matriz-de-confusión-y-métricas">
+<a class="anchor" href="#matriz-de-confusi%C3%B3n-y-m%C3%A9tricas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matriz de Confusión y Métricas</h3>
+<p>Luego de aplicar un modelo a ejemplos del dataset de testeo, se podrá comparar las clases reales de dichos ejemplos con las clases predichas por el modelo. Esta comparación entre clase predicha y clase real se puede ilustrar en una matriz llamada matriz de confusión. Como regla simple, un modelo posee una buena performance si la mayor cantidad de valores se concentran en la diagonal mayor de la matriz.</p>
+
+<p><img src="/Portafolio-ML/images/CMMala.png" alt="" title="Matriz de confusión">
+<img src="/Portafolio-ML/images/CMBuena.png" alt="" title="Matriz de confusión"></p>
+
+<p>El modelo con el que se calculó la primera matriz tiene una performance menor que el modelo con el que se calculó la segunda matriz de confusión.
+También, se pueden ver porcentajes de accuracy, recall y precision. Estas son algunas métricas que evalúan a nuestro modelo de diferente forma.</p>
+
+<p>Accuracy o exactitud del modelo se calcula como el total de ejemplos predichos correctamente sobre el total de ejemplos.</p>
+
+<p>La precisión de una clase (supongamos la clase 0 para simplificar la explicación) se calcula como el total de ejemplos de la clase 0 (True/Actual 0) que fueron clasificados como clase 0 (Predicted 0) sobre la suma de todos los ejemplos que fueron clasificados como clase 0. Una precision baja quiere decirt que nuestro modelo está asignando la clase 0 a muchos objetos que en realidad no pertenecen a la clase 0.</p>
+
+<p>El recall de una clase (supongamos nuevamente la clase 0) se calcula como el total de ejemplos de la clase 0 (True/Actual 0) que fueron clasificados como clase 0 (Predicted 0) sobre la suma de todos los ejemplos reales de la clase 0. Un recall bajo nos dice que se nos “escapan” ejemplos de la clase 0 y terminan siendo clasificados como otras clases.</p>
+
+<p>Dependiendo del problema particular, se intentará maximizar alguna de estas 2 métricas. También, se puede buscar maximizar ambas, para lo que exste otra métrica llamada f1 score (media armónica entre precision y recall).</p>
+
+<h3 id="curva-roc-y-auc">
+<a class="anchor" href="#curva-roc-y-auc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Curva ROC y AUC</h3>
+<p>La curva ROC y el área bajo esta curva sirven como indicadores de la performance de un modelo. Se grafica true positive rate en función del false positive rate. Como regla básica, una curva ROC de un modelo bueno es una que se acerca lo más posible al punto 0,1 de la gráfica (AUC = 1). Una curva mala es una recta entre los puntos 0,0 y 1,1 (AUC = 0,5). 
+<img src="/Portafolio-ML/images/ROC.png" alt="" title="Curva ROC"></p>
+
+<h3 id="contaminación-accidental">
+<a class="anchor" href="#contaminaci%C3%B3n-accidental" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contaminación Accidental</h3>
+<p>La contaminación accidental es un fenómeno que causa que las estimaciones de las métricas que realizamos para validar nuestros modelos no sean realistas, siendo más optimistas que el rendimiento verdadero que tendrá nuestro modelo. Un ejemplo de contaminación accidental es normalizar todo el conjunto de datos previo a realizar los splits de entrenamiento/test. Esto ocurre porque estamos incluyendo indicios (media y la varianza por ejemplo) del set de test en nuestro set de entrenamiento. Para más información sobre este fenómeno y cómo prevenirlo, invito a leer el caso de estudio 3, donde se toma especial precaución para no contaminar accidentalmente.</p>
+
+<h2 id="despliegue-de-modelos">
+<a class="anchor" href="#despliegue-de-modelos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Despliegue de Modelos</h2>
+<p>Luego de que un modelo haya pasado satisfactoriamente todas las etapas previas y se concluye que el modelo es uno bueno para utilizar en producción, comienza la etapa de despliegue. En esta etapa, se provee una api o cualquier tipo de interfaz para que el cliente/los usuarios de una aplicación puedan llamar a nuestro modelo para realizar predicciones. Esta no es una etapa estática, ya que los modelos deben ser evaluados periódicamente para asegurarnos que no estén desactualizados y que no exista un sesgo en las predicciones realizadas.</p>
+
+<p>En el repositorio del artículo publicado a continuación, se muestra cómo se puede hacer para desplegar un modelo de clasificación de imágenes (Python-Keras-TensorFlow) en la nube.</p>
 
 <h2 id="artículos-publicados-y-presentaciones-realizadas">
 <a class="anchor" href="#art%C3%ADculos-publicados-y-presentaciones-realizadas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artículos publicados y presentaciones realizadas</h2>
