@@ -17,7 +17,6 @@
 
 
 ## Introducción
-El propósito de este portafolio es demostrar las habilidades adquiridas relacionadas con Inteligencia artificial.
 
 
 El desarrollo de soluciones que utilicen inteligencia artificial debe ser holistico en el sentido que todas las partes/períodos del desarrollo son sumamente importantes y están muy interrelacionadas entre sí. Por esto, existe un estándar llamado CRISP DM, en el cual se basará este portafolio para explicar qué se debe hacer en cada paso del desarrollo de soluciones, con los puntos clave en cada uno de ellos. 
@@ -26,7 +25,7 @@ El desarrollo de soluciones que utilicen inteligencia artificial debe ser holist
 El proceso CRISP-DM (Cross-Industry Standard Process for Data Mining) describe las fases principales de un proyecto de minería/ciencia de datos, incluyendo la relación que existe entre cada etapa. 
 
 <p align="center">
-  <img src="Images/Crisp.png" width="60%">
+  <img src="./Images/Crisp.png" width="60%">
 </p>
 
 A continuación se explicará qué se debe considerar en cada etapa del proceso CRISP-DM.
