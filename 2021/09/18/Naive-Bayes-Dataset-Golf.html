@@ -8,15 +8,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Naive Bayes Dataset Golf" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Naive bayes" />
-<meta property="og:description" content="Naive bayes" />
+<meta name="description" content="Naive Bayes" />
+<meta property="og:description" content="Naive Bayes" />
 <link rel="canonical" href="https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html" />
 <meta property="og:url" content="https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html" />
 <meta property="og:site_name" content="Portafolio José Vilaseca" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-18T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-09-18T00:00:00-05:00","url":"https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html","@type":"BlogPosting","headline":"Naive Bayes Dataset Golf","dateModified":"2021-09-18T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html"},"description":"Naive bayes","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-18T00:00:00-05:00","url":"https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html","@type":"BlogPosting","headline":"Naive Bayes Dataset Golf","dateModified":"2021-09-18T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://josevilaseca.github.io/Portafolio-ML/2021/09/18/Naive-Bayes-Dataset-Golf.html"},"description":"Naive Bayes","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portafolio-ML/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://josevilaseca.github.io/Portafolio-ML/feed.xml" title="Portafolio José Vilaseca" /><link rel="shortcut icon" type="image/x-icon" href="/Portafolio-ML/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -86,31 +86,37 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Naive bayes</p>
+    <h1 id="naive-bayes">Naive Bayes</h1>
 
-<p>Comparación entre utilización de atributos numéricos sin aplicar transformaciones y su conversión a atributos categóricas.</p>
+<p>El propósito de este post es analizar la performance del algoritmo Naive Bayes al utilizar diferentes transformaciones a los datos.</p>
+
+<p>Las transformaciones en cuestión son:</p>
+
+<p>1)  Utilizar los atributos numéricos sin aplicar transformaciones</p>
+
+<p>2)  Transformar los atributos numéricos a categóricos</p>
 
 <p>Se utiliza el dataset golf provisto por Rapidminer para este ejercicio.</p>
 
-<p><strong>Parte 1</strong></p>
+<h2 id="parte-1">Parte 1</h2>
 
 <p>Conversión de atributos numéricos a categóricos (multinominales). Esto se aplica tanto para el dataset de entrenamiento como para el dataset de test.</p>
 
 <p>Se genera el modelo con Naive Bayes y los resultados fueron los siguientes:</p>
 
-<p><img src="assets/img/2021-09-18-Naive-Bayes---Dataset-Golf/media/image1.png" alt="Imagen que contiene interior, computadora, llenado, coche Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-18-Naive-Bayes---Dataset-Golf/media/image1.png" alt="" /></p>
 
 <p>La exactitud obtenida es de 10/14</p>
 
-<p><strong>Parte 2</strong></p>
+<h2 id="parte-2">Parte 2</h2>
 
-<p>Los atributos numéricos se tratan como numéricos. Se genera el modelo con Naive bayes y los resultados fueron los siguientes:</p>
+<p>Los atributos numéricos se tratan como numéricos. Se genera el modelo con Naive Bayes y los resultados fueron los siguientes:</p>
 
-<p><img src="assets/img/2021-09-18-Naive-Bayes---Dataset-Golf/media/image2.png" alt="Imagen que contiene interior, computadora, llenado, escritorio Descripción generada automáticamente" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-09-18-Naive-Bayes---Dataset-Golf/media/image2.png" alt="" /></p>
 
 <p>La exactitud obtenida es de 9/14</p>
 
-<p><strong>Comparación de resultados</strong></p>
+<h2 id="comparación-de-resultados">Comparación de resultados</h2>
 
 <p>En este caso podríamos concluir que el modelo generado con las variables categóricas tiene mejores resultados que el de variables numéricas. </p>
 
