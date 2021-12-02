@@ -138,6 +138,12 @@ window.onload = wrap_img;
 
 <p><strong>Preparación previa de los datos</strong></p>
 
+<p>Antes de cargar los datasets en rapidminer, es necesario aplicarles una limpieza o transformación para tenerlos estructurados. El script utilizado se puede observar el el repositorio de github del portafolio.</p>
+
+<p><strong>Flujo Rapidminer</strong></p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image1.png" alt="" /></p>
+
 <p><strong>Selección de atributos previa</strong></p>
 
 <p>Debido a la gran cantidad de valores faltantes en algunos atributos, decido descartar los que tengan más de 33% de valores faltantes. También descarto name e id.</p>
@@ -152,11 +158,11 @@ window.onload = wrap_img;
 
 <p>(Distribuciones simil-gaussianas)</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image1.png" alt="" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image2.png" alt="" /></p>
 
 <p>(Distribuciones fuertemente sesgadas hacia la derecha)</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image2.png" alt="" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image3.png" alt="" /></p>
 
 <p>Para el modelado con KNN, se aplicará además una normalización a los datos, ya que este modelo requiere dicha normalización.</p>
 
@@ -166,7 +172,7 @@ window.onload = wrap_img;
 
 <p>Por los argumentos expuestos en el párrafo anterior, estas transformaciones se realizarán para los conjuntos de entrenamiento (por ejemplo, se toma la media y desviación estándar del conjunto de entrenamiento), y luego se transforma a los datos de testeo con los valores hallados para la transformación de los datos de entrenamiento.</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image3.png" alt="" />En la imagen a continuación, se pueden observar los operadores dentro del proceso de CV externo. Se puede apreciar que la media y moda (no hay un bloque de normalización debido al algoritmo random forest) se calculan para el conjunto de entrenamiento, y previo a realizar nuestras predicciones con el modelo en el conjunto de testeo, se aplican las imputaciones deseadas en el bloque Apply Model (3).</p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image4.png" alt="" />En la imagen a continuación, se pueden observar los operadores dentro del proceso de CV externo. Se puede apreciar que la media y moda (no hay un bloque de normalización debido al algoritmo random forest) se calculan para el conjunto de entrenamiento, y previo a realizar nuestras predicciones con el modelo en el conjunto de testeo, se aplican las imputaciones deseadas en el bloque Apply Model (3).</p>
 
 <p><strong>4- Algoritmos y modelos</strong></p>
 
@@ -188,17 +194,17 @@ window.onload = wrap_img;
 
 <p>Naive Bayes</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image4.png" alt="" /></p>
-
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image5.png" alt="" /></p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image6.png" alt="" /></p>
 
 <p>KNN</p>
 
 <p>Se optimiza k (valores entre 1 y 100)</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image6.png" alt="" /></p>
-
 <p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image7.png" alt="" /></p>
+
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image8.png" alt="" /></p>
 
 <p>Random Forest</p>
 
@@ -208,9 +214,9 @@ window.onload = wrap_img;
 
 <p>2)  number_of_trees entre 500 y 3000.</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image8.png" alt="" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image9.png" alt="" /></p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image9.png" alt="" />GradientBoostedTrees</p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image10.png" alt="" />GradientBoostedTrees</p>
 
 <p>Se optimizan los hiperparámetros:</p>
 
@@ -220,9 +226,9 @@ window.onload = wrap_img;
 
 <p>3)  Maximal_depth: de 1 a 10</p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image10.png" alt="" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image11.png" alt="" /></p>
 
-<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image11.png" alt="" /><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image12.png" alt="" /></p>
+<p><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image12.png" alt="" /><img src="https://JoseVilaseca.github.io/Portafolio-ML/assets/img/2021-12-01-Caso-de-Estudio-3-Enfermedad-Cardíaca/media/image13.png" alt="" /></p>
 
 <p><strong>Conclusiones sobre los diferentes modelos</strong></p>
 
