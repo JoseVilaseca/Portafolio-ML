@@ -37,9 +37,9 @@ github_repo: "Portafolio-ML"
 baseurl: "/Portafolio-ML" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-minima:
-  social_links:
-    github: JoseVilaseca
+# minima:
+#   social_links:
+#     github: JoseVilaseca
 
 # Set this to true to get LaTeX math equation support
 use_math: 
